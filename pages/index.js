@@ -90,7 +90,7 @@ const Home = () => (
 
 Home.getInitialProps = async ({ res }) => {
   if (res) {
-    res.setHeader("Cache-Control", "s-maxage=10, stale-while-revalidate");
+    res.setHeader("Cache-Control", "s-maxage=30, stale-while-revalidate");
   }
 
   return {};
