@@ -9,6 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "cross-fetch": "^3.0.4",
     "next": "9.0.5",
     "react": "16.9.0",
     "react-dom": "16.9.0"
