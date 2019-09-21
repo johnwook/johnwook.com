@@ -34,4 +34,21 @@ const getBodyOrNull = (res: Response) => {
   }
 };
 
+const loadPageChunk = ({
+  pageId,
+  limit = 100,
+  cursor = { stack: [] },
+  chunkNumber = 0,
+  verticalColumns = false
+}) =>
+  rpc("loadPageChunk", {
+    pageId,
+    limit,
+    cursor,
+    chunkNumber,
+    verticalColumns
+  });
+
+export { loadPageChunk };
+
 export const sum = (a: number, b: number): number => a + b;
