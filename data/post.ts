@@ -19,7 +19,23 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
   const contentIds: string[] = page.value.content;
 
-  const body = contentIds.map(id => blocks[id]);
+  const body = contentIds
+    .map(id => blocks[id])
+    .filter(block => {
+      if (block.value.type !== "text") {
+        return false;
+      }
+
+      if (!block.value.properties) {
+        return false;
+      }
+
+      return true;
+    })
+    .map(block => ({
+      type: block.value.type,
+      value: block.value.properties.title[0][0]
+    }));
 
   return {
     title,

@@ -8,10 +8,11 @@ describe.only("generate data for post page", () => {
     expect(result.title).toBe("The goal, 치아 교정");
   });
 
-  test.only("returns body which is array of data", async () => {
+  test("returns body which is array of data", async () => {
     const pageId = "6a400436-ae73-464e-acbc-070fdf8d990f";
     const result = await getData({ pageId });
 
-    expect(result.body.length).toBeGreaterThanOrEqual(5);
+    expect(result.body.length).toBe(5);
+    expect(result.body[0].type).toBe("text");
   });
 });
