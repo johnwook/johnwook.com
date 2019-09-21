@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
 
-import { getData, PostData } from "../../data/post";
+import { extractPid, getData, PostData } from "../../data/post";
 
 type Props = PostData;
 
@@ -22,11 +22,9 @@ const Post: NextPage<Props> = ({ title, body }) => (
 );
 
 Post.getInitialProps = async ({ query }) => {
-  const pidRaw = query.pid;
+  const { slug } = query;
 
-  // TODO: make pidRaw to uuid type of id
-
-  const pageId = "6a400436-ae73-464e-acbc-070fdf8d990f";
+  const pageId = extractPid(slug as string);
   const data = await getData({ pageId });
 
   return { ...data };

@@ -49,3 +49,11 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 };
 
 export type PostData = Output;
+
+export const extractPid = (slug: string): string => {
+  const regex = /(\w{8})(\w{4})(\w{4})(\w{4})(\w{12})$/;
+
+  const matched = regex.exec(slug);
+
+  return matched.slice(1, 6).join("-");
+};
