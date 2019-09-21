@@ -42,3 +42,5 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
     body
   };
 };
+
+export type PostData = Output;
