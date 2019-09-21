@@ -1,6 +1,5 @@
 import React from "react";
 import Head from "next/head";
-import Link from "next/link";
 
 const Home = () => (
   <div>
@@ -9,12 +8,9 @@ const Home = () => (
     </Head>
 
     <div>
-      <Link
-        href="/post/[pid]"
-        as="/post/The-goal-6a400436ae73464eacbc070fdf8d990f"
-      >
-        <a>The goal, 치아 교정</a>
-      </Link>
+      <a href="/post/The-goal-6a400436ae73464eacbc070fdf8d990f">
+        The goal, 치아 교정
+      </a>
     </div>
   </div>
 );
