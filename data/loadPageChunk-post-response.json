@@ -5,7 +5,7 @@
         "role": "reader",
         "value": {
           "id": "6a400436-ae73-464e-acbc-070fdf8d990f",
-          "version": 36,
+          "version": 48,
           "type": "page",
           "properties": {
             "1Ote": [
@@ -29,7 +29,7 @@
             ],
             "title": [
               [
-                "the goal"
+                "The goal, 치아 교정"
               ]
             ]
           },
@@ -38,7 +38,8 @@
             "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b",
             "fffa4021-b93a-45ac-86a3-3004ebdd4489",
             "7f63f2bd-80b5-48bf-bab1-12eabb036dbf",
-            "87717be4-c132-4697-b781-1ea891b659f9"
+            "87717be4-c132-4697-b781-1ea891b659f9",
+            "02a950ee-04ee-4f89-9cbd-4d48f8be246f"
           ],
           "format": {
             "block_locked": false,
@@ -47,7 +48,7 @@
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
           "created_time": 1569047700000,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569047700000,
+          "last_edited_time": 1569054000000,
           "parent_id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
           "parent_table": "collection",
           "alive": true,
@@ -219,6 +220,21 @@
           "created_time": 1569047721731,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
           "last_edited_time": 1569047700000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "02a950ee-04ee-4f89-9cbd-4d48f8be246f": {
+        "role": "reader",
+        "value": {
+          "id": "02a950ee-04ee-4f89-9cbd-4d48f8be246f",
+          "version": 3,
+          "type": "text",
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569049800000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569049800000,
           "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
           "parent_table": "block",
           "alive": true

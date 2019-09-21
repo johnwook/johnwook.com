@@ -4,12 +4,18 @@ interface Input {
   pageId: string;
 }
 
-export const getData = async ({ pageId }: Input) => {
+interface Output {
+  title: string;
+}
+
+export const getData = async ({ pageId }: Input): Promise<Output> => {
   const {
     recordMap: { block: blocks }
   } = await loadPageChunk({ pageId });
 
-  console.log(blocks);
+  const page = blocks[pageId];
 
-  return [Object.keys(blocks)];
+  return {
+    title: page.value.properties.title[0][0]
+  };
 };
