@@ -13,8 +13,8 @@ const Home: NextPage<Props> = ({ title, body }) => (
     </Head>
 
     <div>
-      {body.map((b, index) => (
-        <p key={index}>{b.value}</p>
+      {body.map(b => (
+        <p key={b.id}>{b.value}</p>
       ))}
     </div>
   </div>

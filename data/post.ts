@@ -7,6 +7,7 @@ interface Input {
 interface Output {
   title: string;
   body: Array<{
+    id: string;
     type: string;
     value: string;
   }>;
@@ -36,6 +37,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
       return true;
     })
     .map(block => ({
+      id: block.value.id,
       type: block.value.type,
       value: block.value.properties.title[0][0]
     }));
