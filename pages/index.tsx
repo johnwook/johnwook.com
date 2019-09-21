@@ -6,11 +6,17 @@ import { getData, PostData } from "../data/post";
 
 type Props = PostData;
 
-const Home: NextPage<Props> = ({ title }) => (
+const Home: NextPage<Props> = ({ title, body }) => (
   <div>
     <Head>
       <title>{title}</title>
     </Head>
+
+    <div>
+      {body.map((b, index) => (
+        <p key={index}>{b.value}</p>
+      ))}
+    </div>
   </div>
 );
 

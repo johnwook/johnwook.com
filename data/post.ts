@@ -6,7 +6,10 @@ interface Input {
 
 interface Output {
   title: string;
-  body: any[];
+  body: Array<{
+    type: string;
+    value: string;
+  }>;
 }
 
 export const getData = async ({ pageId }: Input): Promise<Output> => {
