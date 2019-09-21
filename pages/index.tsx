@@ -13,6 +13,7 @@ const Home: NextPage<Props> = ({ title, body }) => (
     </Head>
 
     <div>
+      <h1>{title}</h1>
       {body.map(b => (
         <p key={b.id}>{b.value}</p>
       ))}
