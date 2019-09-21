@@ -1,0 +1,372 @@
+{
+  "recordMap": {
+    "block": {
+      "6a400436-ae73-464e-acbc-070fdf8d990f": {
+        "role": "reader",
+        "value": {
+          "id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "version": 48,
+          "type": "page",
+          "properties": {
+            "1Ote": [
+              [
+                "book review,essay"
+              ]
+            ],
+            "o.%m": [
+              [
+                "‣",
+                [
+                  [
+                    "d",
+                    {
+                      "type": "date",
+                      "start_date": "2019-09-15"
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "title": [
+              [
+                "The goal, 치아 교정"
+              ]
+            ]
+          },
+          "content": [
+            "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa",
+            "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b",
+            "fffa4021-b93a-45ac-86a3-3004ebdd4489",
+            "7f63f2bd-80b5-48bf-bab1-12eabb036dbf",
+            "87717be4-c132-4697-b781-1ea891b659f9",
+            "02a950ee-04ee-4f89-9cbd-4d48f8be246f"
+          ],
+          "format": {
+            "block_locked": false,
+            "block_locked_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a"
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569047700000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569054000000,
+          "parent_id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
+          "parent_table": "collection",
+          "alive": true,
+          "copied_from": "05a1bdcb-938a-49c7-af52-b0a5d1c51b55"
+        }
+      },
+      "3d9510bf-90be-46cd-9332-98baec648732": {
+        "role": "reader",
+        "value": {
+          "id": "3d9510bf-90be-46cd-9332-98baec648732",
+          "version": 6,
+          "type": "collection_view",
+          "view_ids": [
+            "e34c69b8-2bba-42f0-bcea-e581cc6f18ff"
+          ],
+          "collection_id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1568774086222,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569046140000,
+          "parent_id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "e740a8ab-2c00-4ea7-8fa0-54c678d40075": {
+        "role": "reader",
+        "value": {
+          "id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
+          "version": 48,
+          "type": "page",
+          "properties": {
+            "title": [
+              [
+                "johnwook.com"
+              ]
+            ]
+          },
+          "content": [
+            "0f199378-952f-45d3-a829-4027ff009261",
+            "3d9510bf-90be-46cd-9332-98baec648732",
+            "629dabd6-1ec8-4fa1-98bf-30723991c249"
+          ],
+          "format": {
+            "page_icon": "💻"
+          },
+          "permissions": [
+            {
+              "role": "editor",
+              "type": "user_permission",
+              "user_id": "e17104ef-8b69-4d3f-a404-dca3f8235c0a"
+            },
+            {
+              "role": "reader",
+              "type": "public_permission"
+            }
+          ],
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1568692920000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1568858760000,
+          "parent_id": "7bebbe1f-b2f1-4352-ac6d-c3b8bedb64a1",
+          "parent_table": "space",
+          "alive": true
+        }
+      },
+      "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa": {
+        "role": "reader",
+        "value": {
+          "id": "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa",
+          "version": 8,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "지난 주 월요일, 치아 교정을 시작했다. 고르지 못한 치열 때문에 스트레스를 받았던 가장 오래된 기억은 초등학교 6학년, 중학교에 들어갈 즈음이다. 근 20년을 고민했던 것 치고 결정은 아주 잠깐이었다. 좋은 분께 치과를 소개 받고, 상담을 예약하고, 한시간 정도 이리 저리 사진을 찍고, 상태와 치료 방법에 대해 듣고, 아내와 전화통화를 하고, 하겠노라고 했다. 그리고 그날로 교정기를 장착하고 집에 돌아왔다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569047700000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569047700000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b": {
+        "role": "reader",
+        "value": {
+          "id": "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b",
+          "version": 8,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "교정기에 적응하는데 생각보다 시간이 좀 필요했다. 먹는 것도, 양치하는 것도 아직 어색하다. 평소보다 컨디션도 조금 떨어지고, 잠도 조금 늘었다. 오늘에야 조금 편해진 느낌이다. 그런데, 생각보다는 별 게 아니라는 생각이 든다. 오랜 시간 걱정하고 고민했던 것에 비하면 큰 일이 아니었다. 아픔에도, 불편에도, 사람은 적응한다. 고민하던 때와 달라진 가장 큰 점은 불편해졌다는 것이 아니라, 이제 하루 하루 치열이 좋아지고 있다는 것이다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569047721730,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569047700000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "fffa4021-b93a-45ac-86a3-3004ebdd4489": {
+        "role": "reader",
+        "value": {
+          "id": "fffa4021-b93a-45ac-86a3-3004ebdd4489",
+          "version": 6,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "엘리 골드렛, 제프 콕스의 '더 골'을 읽었다. 30년도 더 된 책이지만, 오래 살아남은 책들이 보통 그렇듯이, 메시지가 명확하다. 어떠한 목표를 달성하는 방법은 이렇다. 목표를 올바로 세우고, 목표를 향해 나아가고 있는 지 매순간 점검하고, 부족한 부분을 해결한다. 대부분의 사람은 목표가 없거나, 잘못된 목표를 따라가거나, 목표와 상관없는 행동들로 삶을 열심히, 힘들게 낭비하고 있다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569047721730,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569047700000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "7f63f2bd-80b5-48bf-bab1-12eabb036dbf": {
+        "role": "reader",
+        "value": {
+          "id": "7f63f2bd-80b5-48bf-bab1-12eabb036dbf",
+          "version": 8,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "문득, 내 인생이 흘러가는 것을 한걸음 떨어져서 방관자처럼 바라보고 있다는 것을 느낄 때가 있다. '아 이러면 안되는데', '누가 나서서 이렇게 좀 해줬으면 좋겠다', '이것만 되면 이렇게 안 산다'. 그러면서도 정작, 생겼으면 하는 그 일을 위해서는 아무 것도 하지 않는다. 바쁘다는 이유로, 어렵다는 핑계로. 다시, 그러면서도, 목표와 관계없는 새로운 일들로 시간을 채우고, 뒤를 돌아보며 같은 소망으로 후회를 대신한다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569047721730,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569047700000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "87717be4-c132-4697-b781-1ea891b659f9": {
+        "role": "reader",
+        "value": {
+          "id": "87717be4-c132-4697-b781-1ea891b659f9",
+          "version": 6,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "원하는 것을 얻는 법이나 성공적인 인생을 사는 법에는 공통점이 있다. 주체적으로, 원하는 것을 얻기 위한 방향으로 매일을 살아가라는 것이다. '치열이 좋았으면'이라고 소망만 했던 지난 20년 보다, 교정기의 불편함과 어렵지 않은 싸움을 했던 지난 일주일이 내 인생에 더 큰 도움이 됐다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569047721731,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569047700000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "02a950ee-04ee-4f89-9cbd-4d48f8be246f": {
+        "role": "reader",
+        "value": {
+          "id": "02a950ee-04ee-4f89-9cbd-4d48f8be246f",
+          "version": 3,
+          "type": "text",
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1569049800000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569049800000,
+          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "parent_table": "block",
+          "alive": true
+        }
+      }
+    },
+    "collection": {
+      "7226e9a0-9a13-454b-866c-03ba71fcb423": {
+        "role": "reader",
+        "value": {
+          "id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
+          "version": 18,
+          "name": [
+            [
+              "Articles"
+            ]
+          ],
+          "schema": {
+            "1Ote": {
+              "name": "Tags",
+              "type": "multi_select",
+              "options": [
+                {
+                  "id": "5fdb0f92-b096-4450-b319-d12de035a171",
+                  "color": "green",
+                  "value": "essay"
+                },
+                {
+                  "id": "448173b3-bd65-4f10-84fd-92be0243098d",
+                  "color": "yellow",
+                  "value": "book review"
+                }
+              ]
+            },
+            "o.%m": {
+              "name": "Published",
+              "type": "date"
+            },
+            "title": {
+              "name": "Title",
+              "type": "title"
+            }
+          },
+          "format": {
+            "collection_page_properties": [
+              {
+                "visible": true,
+                "property": "1Ote"
+              },
+              {
+                "visible": true,
+                "property": "H1&2"
+              }
+            ]
+          },
+          "parent_id": "3d9510bf-90be-46cd-9332-98baec648732",
+          "parent_table": "block",
+          "alive": true,
+          "template_pages": [
+            "05a1bdcb-938a-49c7-af52-b0a5d1c51b55"
+          ]
+        }
+      }
+    },
+    "notion_user": {
+      "e17104ef-8b69-4d3f-a404-dca3f8235c0a": {
+        "role": "reader",
+        "value": {
+          "id": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "version": 28,
+          "email": "john.wook.choi@gmail.com",
+          "given_name": "Johnwook",
+          "family_name": "Choi",
+          "profile_photo": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/e6043a81-64bc-44a8-996b-95c0073b768d/JW.png",
+          "onboarding_completed": true,
+          "mobile_onboarding_completed": true
+        }
+      }
+    },
+    "collection_view": {
+      "e34c69b8-2bba-42f0-bcea-e581cc6f18ff": {
+        "role": "reader",
+        "value": {
+          "id": "e34c69b8-2bba-42f0-bcea-e581cc6f18ff",
+          "version": 3,
+          "type": "table",
+          "name": "Default View",
+          "query": {
+            "aggregate": [
+              {
+                "id": "count",
+                "type": "title",
+                "property": "title",
+                "view_type": "table",
+                "aggregation_type": "count"
+              }
+            ]
+          },
+          "format": {
+            "table_wrap": true,
+            "table_properties": [
+              {
+                "width": 257,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "1Ote"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "o.%m"
+              }
+            ]
+          },
+          "parent_id": "3d9510bf-90be-46cd-9332-98baec648732",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "27bd2bd5-aec0-440e-b77e-df775ce49e6f",
+            "6a400436-ae73-464e-acbc-070fdf8d990f",
+            "c24de63f-aa89-4d00-9492-2d9faafbe1fa"
+          ]
+        }
+      }
+    },
+    "space": {}
+  },
+  "cursor": {
+    "stack": []
+  }
+}
