@@ -8,7 +8,7 @@ const Home = () => (
     </Head>
 
     <div>
-      <a href="/post/The-goal-6a400436ae73464eacbc070fdf8d990f">
+      <a href="/posts/The-goal-6a400436ae73464eacbc070fdf8d990f">
         The goal, 치아 교정
       </a>
     </div>
