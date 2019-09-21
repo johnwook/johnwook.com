@@ -5,9 +5,5 @@ test("check api call", async () => {
 
   const pageChunk = await loadPageChunk({ pageId: POST_PAGE_ID });
 
-  const blocks = pageChunk.recordMap.block;
-
-  const keys = Object.keys(blocks);
-
-  expect(keys.length).toBeTruthy();
+  expect(pageChunk).toBeTruthy();
 });
