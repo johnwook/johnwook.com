@@ -22,15 +22,10 @@ export const getData = async (): Promise<Output> => {
   const body = contentIds
     .map(id => blocks[id])
     .filter(block => {
-      if (block.value.type !== "text") {
-        return false;
+      if (block.value.type === "image") {
+        return true;
       }
-
-      if (!block.value.properties) {
-        return false;
-      }
-
-      return true;
+      return false;
     })
     .map(block => ({
       id: block.value.id,
