@@ -1,5 +1,4 @@
 import { loadPageChunk, queryCollection } from "../../data/notion";
-import fs from "fs";
 
 describe("notion api call", () => {
   test("check loadPageChunk api call", async () => {
@@ -18,11 +17,6 @@ describe("notion api call", () => {
       collectionId,
       collectionViewId
     });
-
-    fs.writeFileSync(
-      "./data/queryCollection-table-response.json",
-      JSON.stringify(collection, null, 2)
-    );
 
     expect(collection).toBeTruthy();
   });
