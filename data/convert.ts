@@ -13,8 +13,7 @@ interface ImageOutput extends OutputCommon {
 }
 
 type BlockOutput = TextOutput | ImageOutput;
-
-export type ConvertOutput = BlockOutput;
+export type ConvertBlockOutput = BlockOutput;
 
 interface Block {
   value: {
@@ -63,6 +62,7 @@ interface CollectionItem {
 }
 
 type CollectionOutput = CollectionItem[];
+export type ConvertCollectionOutput = CollectionOutput;
 
 export const convertCollection = (
   collectionData: Collection

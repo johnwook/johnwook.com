@@ -1,5 +1,5 @@
 import { loadPageChunk } from "./notion";
-import { convertBlock, ConvertOutput } from "./convert";
+import { convertBlock, ConvertBlockOutput } from "./convert";
 
 interface Input {
   pageId: string;
@@ -7,7 +7,7 @@ interface Input {
 
 interface Output {
   title: string;
-  sections: Array<ConvertOutput>;
+  sections: Array<ConvertBlockOutput>;
 }
 
 export const getData = async ({ pageId }: Input): Promise<Output> => {

@@ -1,8 +1,14 @@
 import { loadPageChunk, queryCollection } from "./notion";
-import { convertBlock, ConvertOutput } from "./convert";
+import {
+  convertBlock,
+  convertCollection,
+  ConvertBlockOutput,
+  ConvertCollectionOutput
+} from "./convert";
 
 interface Output {
-  sections: Array<ConvertOutput>;
+  posts: ConvertCollectionOutput;
+  sections: ConvertBlockOutput[];
 }
 
 const pageId = "e740a8ab-2c00-4ea7-8fa0-54c678d40075";
@@ -27,6 +33,8 @@ export const getData = async (): Promise<Output> => {
     collectionViewId: tableCollection.value.view_ids[0]
   });
 
+  const posts = convertCollection(collectionData);
+
   const sections = homeBlocks
     .filter(block => {
       if (block.value.type === "image") {
@@ -37,6 +45,7 @@ export const getData = async (): Promise<Output> => {
     .map(convertBlock);
 
   return {
+    posts,
     sections
   };
 };

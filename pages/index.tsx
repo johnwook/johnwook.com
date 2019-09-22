@@ -6,7 +6,7 @@ import { getData, HomeData } from "../data/home";
 
 type Props = HomeData;
 
-const Home: NextPage<Props> = ({ sections }) => (
+const Home: NextPage<Props> = ({ posts, sections }) => (
   <div>
     <Head>
       <title>johnwook.com</title>
@@ -19,9 +19,11 @@ const Home: NextPage<Props> = ({ sections }) => (
     </div>
 
     <div>
-      <a href="/posts/The-goal-6a400436ae73464eacbc070fdf8d990f">
-        The goal, 치아 교정
-      </a>
+      {posts.map(p => (
+        <a key={p.id} href={"/posts/" + p.id}>
+          {p.title}
+        </a>
+      ))}
     </div>
   </div>
 );
