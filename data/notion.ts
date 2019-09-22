@@ -23,7 +23,7 @@ const getError = async (res: Response) => {
 };
 
 const getJSONHeaders = (res: Response) => {
-  return JSON.stringify(res.headers);
+  return JSON.stringify(res.headers.raw());
 };
 
 const getBodyOrNull = (res: Response) => {
