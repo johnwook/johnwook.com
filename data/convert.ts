@@ -1,8 +1,20 @@
-interface Output {
+interface OutputCommon {
   id: string;
-  type: "text" | "image";
+}
+
+interface TextOutput extends OutputCommon {
+  type: "text";
   value: string;
 }
+
+interface ImageOutput extends OutputCommon {
+  type: "image";
+  value: string;
+}
+
+type Output = TextOutput | ImageOutput;
+
+export type ConvertOutput = Output;
 
 interface Block {
   value: {

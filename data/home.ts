@@ -1,11 +1,8 @@
 import { loadPageChunk } from "./notion";
+import { ConvertOutput } from "./convert";
 
 interface Output {
-  body: Array<{
-    id: string;
-    type: string;
-    value: string;
-  }>;
+  body: Array<ConvertOutput>;
 }
 
 const pageId = "e740a8ab-2c00-4ea7-8fa0-54c678d40075";
