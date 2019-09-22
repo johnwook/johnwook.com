@@ -23,8 +23,8 @@ export const getData = async (): Promise<Output> => {
   );
 
   const collectionData = await queryCollection({
-    collectionId: tableCollection.collection_id,
-    collectionViewId: tableCollection.view_ids[0]
+    collectionId: tableCollection.value.collection_id,
+    collectionViewId: tableCollection.value.view_ids[0]
   });
 
   const sections = homeBlocks

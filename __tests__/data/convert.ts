@@ -1,8 +1,9 @@
 import postPageData from "../../data/loadPageChunk-post-response.json";
 import homePageData from "../../data/loadPageChunk-home-response.json";
-import { convertBlock } from "../../data/convert";
+import queryCollectionData from "../../data/queryCollection-table-response.json";
+import { convertBlock, convertCollection } from "../../data/convert";
 
-describe("convert notion api result to proper objects", () => {
+describe("convert notion's loadPageChunk api result block to proper objects", () => {
   test("converts text type block", () => {
     // given
     const textBlockId = "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa";
@@ -25,5 +26,16 @@ describe("convert notion api result to proper objects", () => {
     expect(result.type).toBe("image");
     expect(result.id).toBe(imageBlockId);
     expect(result.value).toMatch("/api/image?");
+  });
+});
+
+describe("convert notion's queryCollection api result to proper list", () => {
+  test("converts queryCollection table block", () => {
+    // given
+    const collectionData = queryCollectionData;
+    // when
+    const result = convertCollection(collectionData);
+    // then
+    expect(result.length).toBeGreaterThan(0);
   });
 });

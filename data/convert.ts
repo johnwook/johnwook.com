@@ -12,9 +12,9 @@ interface ImageOutput extends OutputCommon {
   value: string;
 }
 
-type Output = TextOutput | ImageOutput;
+type BlockOutput = TextOutput | ImageOutput;
 
-export type ConvertOutput = Output;
+export type ConvertOutput = BlockOutput;
 
 interface Block {
   value: {
@@ -24,7 +24,7 @@ interface Block {
   };
 }
 
-export const convertBlock = (block: Block): Output => {
+export const convertBlock = (block: Block): BlockOutput => {
   switch (block.value.type) {
     case "text":
       return {
@@ -43,4 +43,42 @@ export const convertBlock = (block: Block): Output => {
     default:
       break;
   }
+};
+
+interface Collection {
+  result: {
+    type: string;
+    blockIds: string[];
+  };
+  recordMap: {
+    collection: any;
+    block: any;
+  };
+}
+
+interface CollectionItem {
+  title: string;
+  id: string;
+  createdAt: number;
+}
+
+type CollectionOutput = CollectionItem[];
+
+export const convertCollection = (
+  collectionData: Collection
+): CollectionOutput => {
+  const {
+    recordMap: { block },
+    result: { blockIds }
+  } = collectionData;
+
+  return blockIds.map(blockId => {
+    const item = block[blockId];
+
+    return {
+      id: blockId,
+      title: item.value.properties.title[0][0],
+      createdAt: item.value.created_time
+    };
+  });
 };
