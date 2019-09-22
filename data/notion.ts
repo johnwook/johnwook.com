@@ -49,4 +49,40 @@ const loadPageChunk = ({
     verticalColumns
   });
 
-export { loadPageChunk };
+const defaultLoader = {
+  limit: 70,
+  loadContentCover: true,
+  type: "table",
+  userLocale: "en",
+  userTimeZone: "Asia/Seoul"
+};
+
+const defaultQuery = {
+  aggregate: [
+    {
+      aggregation_type: "count",
+      id: "count",
+      property: "title",
+      type: "title",
+      view_type: "table"
+    }
+  ],
+  filter: [],
+  filter_operator: "and",
+  sort: []
+};
+
+const queryCollection = ({
+  collectionId,
+  collectionViewId,
+  loader = defaultLoader,
+  query = defaultQuery
+}) =>
+  rpc("queryCollection", {
+    collectionId,
+    collectionViewId,
+    loader,
+    query
+  });
+
+export { loadPageChunk, queryCollection };
