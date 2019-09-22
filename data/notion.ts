@@ -1,4 +1,4 @@
-import fetch from "cross-fetch";
+import fetch, { Response } from "node-fetch";
 
 const rpc = async (fnName: string, body: object = {}) => {
   const res = await fetch(`https://www.notion.so/api/v3/${fnName}`, {
