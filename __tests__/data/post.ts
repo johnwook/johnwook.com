@@ -1,4 +1,4 @@
-import { extractPid, getData } from "../../data/post";
+import { getData } from "../../data/post";
 
 describe.skip("generate data for post page", () => {
   test("returns title", async () => {
@@ -14,13 +14,5 @@ describe.skip("generate data for post page", () => {
 
     expect(result.sections.length).toBe(5);
     expect(result.sections[0].type).toBe("text");
-  });
-});
-
-describe("extractPid", () => {
-  test("extracts uuid part from page slug", () => {
-    const slug = "The-goal-6a400436ae73464eacbc070fdf8d990f";
-
-    expect(extractPid(slug)).toBe("6a400436-ae73-464e-acbc-070fdf8d990f");
   });
 });
