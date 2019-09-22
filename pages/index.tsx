@@ -14,15 +14,17 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
 
     <div>
       {sections.map(b => (
-        <img key={b.id} src={b.value} />
+        <div key={b.id}>
+          <img src={b.value} />
+        </div>
       ))}
     </div>
 
     <div>
       {posts.map(p => (
-        <a key={p.id} href={"/posts/" + p.id}>
-          {p.title}
-        </a>
+        <div key={p.id}>
+          <a href={"/posts/" + p.id}>{p.title}</a>
+        </div>
       ))}
     </div>
   </div>
