@@ -1,4 +1,5 @@
 import postPageData from "../../data/loadPageChunk-post-response.json";
+import homePageData from "../../data/loadPageChunk-home-response.json";
 import convert from "../../data/convert";
 
 describe("convert notion api result to proper objects", () => {
@@ -12,5 +13,17 @@ describe("convert notion api result to proper objects", () => {
     expect(result.type).toBe("text");
     expect(result.id).toBe(textBlockId);
     expect(typeof result.value).toBe("string");
+  });
+
+  test("converts image type block", () => {
+    // given
+    const imageBlockId = "0f199378-952f-45d3-a829-4027ff009261";
+    const imageBlock = homePageData.recordMap.block[imageBlockId];
+    // when
+    const result = convert(imageBlock);
+    // then
+    expect(result.type).toBe("image");
+    expect(result.id).toBe(imageBlockId);
+    expect(result.value).toMatch("/api/image?");
   });
 });
