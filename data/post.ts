@@ -1,4 +1,5 @@
 import { loadPageChunk } from "./notion";
+import convert, { ConvertOutput } from "./convert";
 
 interface Input {
   pageId: string;
@@ -6,11 +7,7 @@ interface Input {
 
 interface Output {
   title: string;
-  body: Array<{
-    id: string;
-    type: string;
-    value: string;
-  }>;
+  body: Array<ConvertOutput>;
 }
 
 export const getData = async ({ pageId }: Input): Promise<Output> => {
@@ -26,21 +23,13 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
   const body = contentIds
     .map(id => blocks[id])
     .filter(block => {
-      if (block.value.type !== "text") {
-        return false;
+      if (block.value.type === "text" && block.value.properties) {
+        return true;
       }
 
-      if (!block.value.properties) {
-        return false;
-      }
-
-      return true;
+      return false;
     })
-    .map(block => ({
-      id: block.value.id,
-      type: block.value.type,
-      value: block.value.properties.title[0][0]
-    }));
+    .map(convert);
 
   return {
     title,

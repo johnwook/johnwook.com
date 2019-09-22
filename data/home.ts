@@ -1,5 +1,5 @@
 import { loadPageChunk } from "./notion";
-import { ConvertOutput } from "./convert";
+import convert, { ConvertOutput } from "./convert";
 
 interface Output {
   body: Array<ConvertOutput>;
@@ -24,13 +24,7 @@ export const getData = async (): Promise<Output> => {
       }
       return false;
     })
-    .map(block => ({
-      id: block.value.id,
-      type: block.value.type,
-      value: `/api/image?url=${encodeURIComponent(
-        block.value.properties.source[0][0]
-      )}`
-    }));
+    .map(convert);
 
   return {
     body

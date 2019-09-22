@@ -14,7 +14,7 @@ const Home: NextPage<Props> = ({ body }) => (
 
     <div>
       {body.map(b => (
-        <img src={b.value} />
+        <img key={b.id} src={b.value} />
       ))}
     </div>
 
