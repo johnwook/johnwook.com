@@ -6,14 +6,14 @@ import { getData, HomeData } from "../data/home";
 
 type Props = HomeData;
 
-const Home: NextPage<Props> = ({ body }) => (
+const Home: NextPage<Props> = ({ sections }) => (
   <div>
     <Head>
       <title>johnwook.com</title>
     </Head>
 
     <div>
-      {body.map(b => (
+      {sections.map(b => (
         <img key={b.id} src={b.value} />
       ))}
     </div>

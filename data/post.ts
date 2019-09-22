@@ -7,7 +7,7 @@ interface Input {
 
 interface Output {
   title: string;
-  body: Array<ConvertOutput>;
+  sections: Array<ConvertOutput>;
 }
 
 export const getData = async ({ pageId }: Input): Promise<Output> => {
@@ -20,7 +20,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
   const contentIds: string[] = page.value.content;
 
-  const body = contentIds
+  const sections = contentIds
     .map(id => blocks[id])
     .filter(block => {
       if (block.value.type === "text" && block.value.properties) {
@@ -33,7 +33,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
   return {
     title,
-    body
+    sections
   };
 };
 

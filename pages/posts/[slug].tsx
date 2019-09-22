@@ -6,7 +6,7 @@ import { extractPid, getData, PostData } from "../../data/post";
 
 type Props = PostData;
 
-const Post: NextPage<Props> = ({ title, body }) => (
+const Post: NextPage<Props> = ({ title, sections }) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -14,7 +14,7 @@ const Post: NextPage<Props> = ({ title, body }) => (
 
     <div>
       <h1>{title}</h1>
-      {body.map(b => (
+      {sections.map(b => (
         <p key={b.id}>{b.value}</p>
       ))}
     </div>
