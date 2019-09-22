@@ -17,7 +17,7 @@ describe("generate data for post page", () => {
   });
 });
 
-describe.only("extractPid", () => {
+describe("extractPid", () => {
   test("extracts uuid part from page slug", () => {
     const slug = "The-goal-6a400436ae73464eacbc070fdf8d990f";
 
