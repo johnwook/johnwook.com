@@ -4,12 +4,17 @@
     {
       "src": "/",
       "methods": ["GET"],
-      "headers": { "cache-control": "s-maxage=15, stale-while-revalidate" }
+      "headers": { "cache-control": "s-maxage=30, stale-while-revalidate" }
     },
     {
       "src": "/posts/.*",
       "methods": ["GET"],
-      "headers": { "cache-control": "s-maxage=15, stale-while-revalidate" }
+      "headers": { "cache-control": "s-maxage=30, stale-while-revalidate" }
+    },
+    {
+      "src": "/api/.*",
+      "methods": ["GET"],
+      "headers": { "cache-control": "s-maxage=30, stale-while-revalidate" }
     }
   ]
 }

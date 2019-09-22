@@ -1,0 +1,250 @@
+{
+  "recordMap": {
+    "block": {
+      "e740a8ab-2c00-4ea7-8fa0-54c678d40075": {
+        "role": "reader",
+        "value": {
+          "id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
+          "version": 51,
+          "type": "page",
+          "properties": {
+            "title": [
+              [
+                "johnwook.com"
+              ]
+            ]
+          },
+          "content": [
+            "0f199378-952f-45d3-a829-4027ff009261",
+            "3d9510bf-90be-46cd-9332-98baec648732",
+            "629dabd6-1ec8-4fa1-98bf-30723991c249"
+          ],
+          "format": {
+            "page_icon": "💻"
+          },
+          "permissions": [
+            {
+              "role": "editor",
+              "type": "user_permission",
+              "user_id": "e17104ef-8b69-4d3f-a404-dca3f8235c0a"
+            },
+            {
+              "role": "reader",
+              "type": "public_permission"
+            }
+          ],
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1568692920000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569058500000,
+          "parent_id": "7bebbe1f-b2f1-4352-ac6d-c3b8bedb64a1",
+          "parent_table": "space",
+          "alive": true
+        }
+      },
+      "0f199378-952f-45d3-a829-4027ff009261": {
+        "role": "reader",
+        "value": {
+          "id": "0f199378-952f-45d3-a829-4027ff009261",
+          "version": 15,
+          "type": "image",
+          "properties": {
+            "source": [
+              [
+                "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb"
+              ]
+            ]
+          },
+          "format": {
+            "display_source": "https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb"
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1568774068098,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569058500000,
+          "parent_id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "3d9510bf-90be-46cd-9332-98baec648732": {
+        "role": "reader",
+        "value": {
+          "id": "3d9510bf-90be-46cd-9332-98baec648732",
+          "version": 7,
+          "type": "collection_view",
+          "view_ids": [
+            "e34c69b8-2bba-42f0-bcea-e581cc6f18ff"
+          ],
+          "collection_id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1568774086222,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1569126660000,
+          "parent_id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
+          "parent_table": "block",
+          "alive": true
+        }
+      },
+      "629dabd6-1ec8-4fa1-98bf-30723991c249": {
+        "role": "reader",
+        "value": {
+          "id": "629dabd6-1ec8-4fa1-98bf-30723991c249",
+          "version": 19,
+          "type": "text",
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1568858700000,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1568858760000,
+          "parent_id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
+          "parent_table": "block",
+          "alive": true
+        }
+      }
+    },
+    "space": {},
+    "notion_user": {
+      "e17104ef-8b69-4d3f-a404-dca3f8235c0a": {
+        "role": "reader",
+        "value": {
+          "id": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "version": 28,
+          "email": "john.wook.choi@gmail.com",
+          "given_name": "Johnwook",
+          "family_name": "Choi",
+          "profile_photo": "https://s3-us-west-2.amazonaws.com/public.notion-static.com/e6043a81-64bc-44a8-996b-95c0073b768d/JW.png",
+          "onboarding_completed": true,
+          "mobile_onboarding_completed": true
+        }
+      }
+    },
+    "collection_view": {
+      "e34c69b8-2bba-42f0-bcea-e581cc6f18ff": {
+        "role": "reader",
+        "value": {
+          "id": "e34c69b8-2bba-42f0-bcea-e581cc6f18ff",
+          "version": 5,
+          "type": "table",
+          "name": "Default View",
+          "query": {
+            "aggregate": [
+              {
+                "id": "count",
+                "type": "title",
+                "property": "title",
+                "view_type": "table",
+                "aggregation_type": "count"
+              }
+            ]
+          },
+          "format": {
+            "table_wrap": true,
+            "table_properties": [
+              {
+                "width": 257,
+                "visible": true,
+                "property": "title"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "1Ote"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "o.%m"
+              },
+              {
+                "width": 200,
+                "visible": true,
+                "property": "4}4A"
+              },
+              {
+                "visible": true,
+                "property": "a^l0"
+              }
+            ]
+          },
+          "parent_id": "3d9510bf-90be-46cd-9332-98baec648732",
+          "parent_table": "block",
+          "alive": true,
+          "page_sort": [
+            "27bd2bd5-aec0-440e-b77e-df775ce49e6f",
+            "6a400436-ae73-464e-acbc-070fdf8d990f",
+            "c24de63f-aa89-4d00-9492-2d9faafbe1fa"
+          ]
+        }
+      }
+    },
+    "collection": {
+      "7226e9a0-9a13-454b-866c-03ba71fcb423": {
+        "role": "reader",
+        "value": {
+          "id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
+          "version": 22,
+          "name": [
+            [
+              "Articles"
+            ]
+          ],
+          "schema": {
+            "1Ote": {
+              "name": "Tags",
+              "type": "multi_select",
+              "options": [
+                {
+                  "id": "5fdb0f92-b096-4450-b319-d12de035a171",
+                  "color": "green",
+                  "value": "essay"
+                },
+                {
+                  "id": "448173b3-bd65-4f10-84fd-92be0243098d",
+                  "color": "yellow",
+                  "value": "book review"
+                }
+              ]
+            },
+            "4}4A": {
+              "name": "Column",
+              "type": "created_time"
+            },
+            "a^l0": {
+              "name": "Column 1",
+              "type": "last_edited_time"
+            },
+            "o.%m": {
+              "name": "Published",
+              "type": "date"
+            },
+            "title": {
+              "name": "Title",
+              "type": "title"
+            }
+          },
+          "format": {
+            "collection_page_properties": [
+              {
+                "visible": true,
+                "property": "1Ote"
+              },
+              {
+                "visible": true,
+                "property": "H1&2"
+              }
+            ]
+          },
+          "parent_id": "3d9510bf-90be-46cd-9332-98baec648732",
+          "parent_table": "block",
+          "alive": true,
+          "template_pages": [
+            "05a1bdcb-938a-49c7-af52-b0a5d1c51b55"
+          ]
+        }
+      }
+    }
+  },
+  "cursor": {
+    "stack": []
+  }
+}
