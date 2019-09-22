@@ -30,7 +30,9 @@ export const getData = async (): Promise<Output> => {
     .map(block => ({
       id: block.value.id,
       type: block.value.type,
-      value: block.value.properties.title[0][0]
+      value: `/api/image?url=${encodeURIComponent(
+        block.value.properties.source[0][0]
+      )}`
     }));
 
   return {
