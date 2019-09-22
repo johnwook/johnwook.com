@@ -1,5 +1,5 @@
 import { loadPageChunk } from "./notion";
-import convert, { ConvertOutput } from "./convert";
+import { convertBlock, ConvertOutput } from "./convert";
 
 interface Input {
   pageId: string;
@@ -29,7 +29,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
       return false;
     })
-    .map(convert);
+    .map(convertBlock);
 
   return {
     title,

@@ -24,7 +24,7 @@ interface Block {
   };
 }
 
-export default (block: Block): Output => {
+export const convertBlock = (block: Block): Output => {
   switch (block.value.type) {
     case "text":
       return {

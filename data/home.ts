@@ -1,5 +1,5 @@
-import { loadPageChunk } from "./notion";
-import convert, { ConvertOutput } from "./convert";
+import { loadPageChunk, queryCollection } from "./notion";
+import { convertBlock, ConvertOutput } from "./convert";
 
 interface Output {
   sections: Array<ConvertOutput>;
@@ -16,15 +16,25 @@ export const getData = async (): Promise<Output> => {
 
   const contentIds: string[] = page.value.content;
 
-  const sections = contentIds
-    .map(id => blocks[id])
+  const homeBlocks = contentIds.map(id => blocks[id]);
+
+  const tableCollection = homeBlocks.find(
+    block => block.value.type === "collection_view"
+  );
+
+  const collectionData = await queryCollection({
+    collectionId: tableCollection.collection_id,
+    collectionViewId: tableCollection.view_ids[0]
+  });
+
+  const sections = homeBlocks
     .filter(block => {
       if (block.value.type === "image") {
         return true;
       }
       return false;
     })
-    .map(convert);
+    .map(convertBlock);
 
   return {
     sections

@@ -12,8 +12,8 @@ describe.skip("generate data for post page", () => {
     const pageId = "6a400436-ae73-464e-acbc-070fdf8d990f";
     const result = await getData({ pageId });
 
-    expect(result.body.length).toBe(5);
-    expect(result.body[0].type).toBe("text");
+    expect(result.sections.length).toBe(5);
+    expect(result.sections[0].type).toBe("text");
   });
 });
 
