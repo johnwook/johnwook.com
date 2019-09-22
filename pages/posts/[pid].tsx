@@ -2,7 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
 
-import { extractPid, getData, PostData } from "../../data/post";
+import { getData, PostData } from "../../data/post";
 
 type Props = PostData;
 
@@ -22,9 +22,10 @@ const Post: NextPage<Props> = ({ title, sections }) => (
 );
 
 Post.getInitialProps = async ({ query }) => {
-  const { slug } = query;
+  const { pid } = query;
 
-  const pageId = extractPid(slug as string);
+  const pageId = Array.isArray(pid) ? pid[0] : pid;
+
   const data = await getData({ pageId });
 
   return { ...data };
