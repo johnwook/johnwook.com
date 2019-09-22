@@ -2,11 +2,11 @@ import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
 
-import { extractPid, getData, PostData } from "../../data/post";
+import { getData, PostData } from "../../data/post";
 
 type Props = PostData;
 
-const Post: NextPage<Props> = ({ title, body }) => (
+const Post: NextPage<Props> = ({ title, sections }) => (
   <div>
     <Head>
       <title>{title}</title>
@@ -14,7 +14,7 @@ const Post: NextPage<Props> = ({ title, body }) => (
 
     <div>
       <h1>{title}</h1>
-      {body.map(b => (
+      {sections.map(b => (
         <p key={b.id}>{b.value}</p>
       ))}
     </div>
@@ -22,9 +22,10 @@ const Post: NextPage<Props> = ({ title, body }) => (
 );
 
 Post.getInitialProps = async ({ query }) => {
-  const { slug } = query;
+  const { pid } = query;
 
-  const pageId = extractPid(slug as string);
+  const pageId = Array.isArray(pid) ? pid[0] : pid;
+
   const data = await getData({ pageId });
 
   return { ...data };

@@ -1,4 +1,5 @@
 import { loadPageChunk } from "./notion";
+import { convertBlock, ConvertBlockOutput } from "./convert";
 
 interface Input {
   pageId: string;
@@ -6,11 +7,7 @@ interface Input {
 
 interface Output {
   title: string;
-  body: Array<{
-    id: string;
-    type: string;
-    value: string;
-  }>;
+  sections: Array<ConvertBlockOutput>;
 }
 
 export const getData = async ({ pageId }: Input): Promise<Output> => {
@@ -23,37 +20,21 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
   const contentIds: string[] = page.value.content;
 
-  const body = contentIds
+  const sections = contentIds
     .map(id => blocks[id])
     .filter(block => {
-      if (block.value.type !== "text") {
-        return false;
+      if (block.value.type === "text" && block.value.properties) {
+        return true;
       }
 
-      if (!block.value.properties) {
-        return false;
-      }
-
-      return true;
+      return false;
     })
-    .map(block => ({
-      id: block.value.id,
-      type: block.value.type,
-      value: block.value.properties.title[0][0]
-    }));
+    .map(convertBlock);
 
   return {
     title,
-    body
+    sections
   };
 };
 
 export type PostData = Output;
-
-export const extractPid = (slug: string): string => {
-  const regex = /(\w{8})(\w{4})(\w{4})(\w{4})(\w{12})$/;
-
-  const matched = regex.exec(slug);
-
-  return matched.slice(1, 6).join("-");
-};

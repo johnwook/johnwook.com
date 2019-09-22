@@ -6,22 +6,24 @@ import { getData, HomeData } from "../data/home";
 
 type Props = HomeData;
 
-const Home: NextPage<Props> = ({ body }) => (
+const Home: NextPage<Props> = ({ posts, sections }) => (
   <div>
     <Head>
       <title>johnwook.com</title>
     </Head>
 
     <div>
-      {body.map(b => (
-        <img src={b.value} />
+      {sections.map(b => (
+        <img key={b.id} src={b.value} />
       ))}
     </div>
 
     <div>
-      <a href="/posts/The-goal-6a400436ae73464eacbc070fdf8d990f">
-        The goal, 치아 교정
-      </a>
+      {posts.map(p => (
+        <a key={p.id} href={"/posts/" + p.id}>
+          {p.title}
+        </a>
+      ))}
     </div>
   </div>
 );
