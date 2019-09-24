@@ -5,6 +5,7 @@ import { NextPage } from "next";
 import fetch from "cross-fetch";
 
 import { HomeData } from "../data/home";
+import { getBaseUrl } from "../urlHelper";
 
 type Props = HomeData;
 
@@ -33,28 +34,7 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
 );
 
 Home.getInitialProps = async ({ req }) => {
-  let baseUrl = "";
-
-  if (req) {
-    const {
-      headers: { host }
-    } = req;
-
-    if (host.indexOf("localhost") > -1) {
-      baseUrl = "http://" + host;
-    } else {
-      baseUrl = "https://" + host;
-    }
-  } else {
-    baseUrl =
-      window.location.protocol +
-      "//" +
-      window.location.hostname +
-      ":" +
-      window.location.port;
-  }
-
-  const url = baseUrl + "/api/home";
+  const url = getBaseUrl(req) + "/api/home";
 
   const res = await fetch(url);
 

@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import fetch from "cross-fetch";
 
 import { PostData } from "../../data/post";
+import { getBaseUrl } from "../../urlHelper";
 
 type Props = PostData;
 
@@ -24,30 +25,9 @@ const Post: NextPage<Props> = ({ title, sections }) => (
 
 Post.getInitialProps = async ({ query, req }) => {
   const { pid } = query;
-  let baseUrl = "";
-
-  if (req) {
-    const {
-      headers: { host }
-    } = req;
-
-    if (host.indexOf("localhost") > -1) {
-      baseUrl = "http://" + host;
-    } else {
-      baseUrl = "https://" + host;
-    }
-  } else {
-    baseUrl =
-      window.location.protocol +
-      "//" +
-      window.location.hostname +
-      ":" +
-      window.location.port;
-  }
-
   const pageId = Array.isArray(pid) ? pid[0] : pid;
 
-  const url = baseUrl + "/api/posts/" + pageId;
+  const url = getBaseUrl(req) + "/api/posts/" + pageId;
 
   const res = await fetch(url);
 
