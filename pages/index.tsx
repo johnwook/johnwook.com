@@ -1,5 +1,6 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { NextPage } from "next";
 
 import { getData, HomeData } from "../data/home";
@@ -22,9 +23,9 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
 
     <div>
       {posts.map(p => (
-        <div key={p.id}>
-          <a href={"/posts/" + p.id}>{p.title}</a>
-        </div>
+        <Link key={p.id} href={"/posts/[pid]"} as={`/posts/${p.id}`}>
+          <a>{p.title}</a>
+        </Link>
       ))}
     </div>
   </div>
