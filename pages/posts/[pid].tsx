@@ -37,7 +37,12 @@ Post.getInitialProps = async ({ query, req }) => {
       baseUrl = "https://" + host;
     }
   } else {
-    baseUrl = window.location.protocol + "//" + window.location.hostname;
+    baseUrl =
+      window.location.protocol +
+      "//" +
+      window.location.hostname +
+      ":" +
+      window.location.port;
   }
 
   const pageId = Array.isArray(pid) ? pid[0] : pid;
