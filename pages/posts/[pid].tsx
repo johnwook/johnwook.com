@@ -1,8 +1,10 @@
 import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
+import fetch from "cross-fetch";
 
-import { getData, PostData } from "../../data/post";
+import { PostData } from "../../data/post";
+import { getBaseUrl } from "../../urlHelper";
 
 type Props = PostData;
 
@@ -21,14 +23,19 @@ const Post: NextPage<Props> = ({ title, sections }) => (
   </div>
 );
 
-Post.getInitialProps = async ({ query }) => {
+Post.getInitialProps = async ({ query, req }) => {
   const { pid } = query;
-
   const pageId = Array.isArray(pid) ? pid[0] : pid;
 
-  const data = await getData({ pageId });
+  const url = getBaseUrl(req) + "/api/posts/" + pageId;
 
-  return { ...data };
+  const res = await fetch(url);
+
+  if (res.ok) {
+    return { ...(await res.json()) };
+  } else {
+    throw new Error("Oops");
+  }
 };
 
 export default Post;

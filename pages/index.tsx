@@ -1,8 +1,11 @@
 import React from "react";
 import Head from "next/head";
+import Link from "next/link";
 import { NextPage } from "next";
+import fetch from "cross-fetch";
 
-import { getData, HomeData } from "../data/home";
+import { HomeData } from "../data/home";
+import { getBaseUrl } from "../urlHelper";
 
 type Props = HomeData;
 
@@ -22,18 +25,24 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
 
     <div>
       {posts.map(p => (
-        <div key={p.id}>
-          <a href={"/posts/" + p.id}>{p.title}</a>
-        </div>
+        <Link key={p.id} href={"/posts/[pid]"} as={`/posts/${p.id}`}>
+          <a>{p.title}</a>
+        </Link>
       ))}
     </div>
   </div>
 );
 
-Home.getInitialProps = async () => {
-  const data = await getData();
+Home.getInitialProps = async ({ req }) => {
+  const url = getBaseUrl(req) + "/api/home";
 
-  return { ...data };
+  const res = await fetch(url);
+
+  if (res.ok) {
+    return { ...(await res.json()) };
+  } else {
+    throw new Error("Oops");
+  }
 };
 
 export default Home;
