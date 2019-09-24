@@ -3,7 +3,7 @@ import Head from "next/head";
 import { NextPage } from "next";
 import fetch from "cross-fetch";
 
-import { getData, PostData } from "../../data/post";
+import { PostData } from "../../data/post";
 
 type Props = PostData;
 
@@ -22,14 +22,27 @@ const Post: NextPage<Props> = ({ title, sections }) => (
   </div>
 );
 
-Post.getInitialProps = async ({ query }) => {
+Post.getInitialProps = async ({ query, req }) => {
   const { pid } = query;
+  let baseUrl = "";
+
+  if (req) {
+    const {
+      headers: { host }
+    } = req;
+
+    if (host.indexOf("localhost") > -1) {
+      baseUrl = "http://" + host;
+    } else {
+      baseUrl = "https://" + host;
+    }
+  } else {
+    baseUrl = window.location.protocol + "//" + window.location.hostname;
+  }
 
   const pageId = Array.isArray(pid) ? pid[0] : pid;
 
-  const url = `http://localhost:3000/api/posts/${pageId}`;
-
-  console.log("url\t", url);
+  const url = baseUrl + "/api/posts/" + pageId;
 
   const res = await fetch(url);
 
