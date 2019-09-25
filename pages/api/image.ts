@@ -1,4 +1,4 @@
-import fetch from "node-fetch";
+import fetch from "cross-fetch";
 import { parse } from "url";
 import { NextApiRequest, NextApiResponse } from "next";
 
@@ -10,5 +10,6 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     `https://www.notion.so/image/${encodeURIComponent(url as string)}`
   );
   res.setHeader("content-type", r.headers.get("content-type"));
-  r.body.pipe(res);
+  const temp = r.body as any;
+  temp.pipe(res);
 };
