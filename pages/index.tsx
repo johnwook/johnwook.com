@@ -3,6 +3,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { NextPage } from "next";
 import fetch from "cross-fetch";
+import Button from "@material-ui/core/Button";
 
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
@@ -14,6 +15,10 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
     <Head>
       <title>johnwook.com</title>
     </Head>
+
+    <Button variant="contained" color="primary">
+      Hello World
+    </Button>
 
     <div>
       {sections.map(b => (
