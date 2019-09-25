@@ -2,6 +2,7 @@ import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
 import fetch from "cross-fetch";
+import Container from "@material-ui/core/Container";
 
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
@@ -9,7 +10,7 @@ import { getBaseUrl } from "../../urlHelper";
 type Props = PostData;
 
 const Post: NextPage<Props> = ({ title, sections }) => (
-  <div>
+  <Container maxWidth="sm">
     <Head>
       <title>{title}</title>
     </Head>
@@ -20,7 +21,7 @@ const Post: NextPage<Props> = ({ title, sections }) => (
         <p key={b.id}>{b.value}</p>
       ))}
     </div>
-  </div>
+  </Container>
 );
 
 Post.getInitialProps = async ({ query, req }) => {

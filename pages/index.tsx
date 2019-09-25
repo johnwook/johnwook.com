@@ -3,7 +3,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { NextPage } from "next";
 import fetch from "cross-fetch";
-import Button from "@material-ui/core/Button";
+import Container from "@material-ui/core/Container";
+import Image from "material-ui-image";
 
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
@@ -11,19 +12,15 @@ import { getBaseUrl } from "../urlHelper";
 type Props = HomeData;
 
 const Home: NextPage<Props> = ({ posts, sections }) => (
-  <div>
+  <Container maxWidth="sm">
     <Head>
       <title>johnwook.com</title>
     </Head>
 
-    <Button variant="contained" color="primary">
-      Hello World
-    </Button>
-
     <div>
       {sections.map(b => (
         <div key={b.id}>
-          <img src={b.value} />
+          <Image src={b.value} />
         </div>
       ))}
     </div>
@@ -35,7 +32,7 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
         </Link>
       ))}
     </div>
-  </div>
+  </Container>
 );
 
 Home.getInitialProps = async ({ req }) => {
