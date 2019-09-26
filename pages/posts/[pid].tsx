@@ -1,18 +1,20 @@
 import React from "react";
+
 import Head from "next/head";
 import { NextPage } from "next";
-import fetch from "cross-fetch";
-import Container from "@material-ui/core/Container";
 
+import fetch from "cross-fetch";
+
+import Layout from "../../components/layout";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
 
 type Props = PostData;
 
 const Post: NextPage<Props> = ({ title, sections }) => (
-  <Container maxWidth="sm">
+  <Layout>
     <Head>
-      <title>{title}</title>
+      <title>{title}::johnwook.com</title>
     </Head>
 
     <div>
@@ -21,7 +23,7 @@ const Post: NextPage<Props> = ({ title, sections }) => (
         <p key={b.id}>{b.value}</p>
       ))}
     </div>
-  </Container>
+  </Layout>
 );
 
 Post.getInitialProps = async ({ query, req }) => {
