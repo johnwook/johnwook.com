@@ -3,16 +3,16 @@ import Head from "next/head";
 import Link from "next/link";
 import { NextPage } from "next";
 import fetch from "cross-fetch";
-import Container from "@material-ui/core/Container";
 import Image from "material-ui-image";
 
+import Layout from "../components/layout";
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
 
 type Props = HomeData;
 
 const Home: NextPage<Props> = ({ posts, sections }) => (
-  <Container maxWidth="sm">
+  <Layout>
     <Head>
       <title>johnwook.com</title>
     </Head>
@@ -32,7 +32,7 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
         </Link>
       ))}
     </div>
-  </Container>
+  </Layout>
 );
 
 Home.getInitialProps = async ({ req }) => {
