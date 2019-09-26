@@ -1,7 +1,8 @@
 import React from "react";
-import Head from "next/head";
+
 import Link from "next/link";
 import { NextPage } from "next";
+
 import fetch from "cross-fetch";
 import Image from "material-ui-image";
 
@@ -13,10 +14,6 @@ type Props = HomeData;
 
 const Home: NextPage<Props> = ({ posts, sections }) => (
   <Layout>
-    <Head>
-      <title>johnwook.com</title>
-    </Head>
-
     <div>
       {sections.map(b => (
         <div key={b.id}>
