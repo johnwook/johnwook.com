@@ -20,11 +20,9 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
     <Card>
       <CardMedia component="img" image={sections[0].value} />
       <CardContent>
-        <Typography
-          variant="body2"
-          color="textSecondary"
-          component="p"
-        ></Typography>
+        <Typography variant="body2" color="textSecondary" component="p">
+          {sections[1].value}
+        </Typography>
       </CardContent>
     </Card>
 

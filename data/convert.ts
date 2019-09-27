@@ -26,6 +26,9 @@ interface Block {
 export const convertBlock = (block: Block): BlockOutput => {
   switch (block.value.type) {
     case "text":
+      if (!block.value.properties) {
+        break;
+      }
       return {
         id: block.value.id,
         type: block.value.type,
