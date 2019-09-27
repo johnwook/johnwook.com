@@ -35,12 +35,11 @@ export const getData = async (): Promise<Output> => {
 
   const posts = convertCollection(collectionData);
 
+  const availableType = ["image", "text"];
+
   const sections = homeBlocks
     .filter(block => {
-      if (block.value.type === "image") {
-        return true;
-      }
-      return false;
+      return availableType.indexOf(block.value.type) > -1;
     })
     .map(convertBlock);
 
