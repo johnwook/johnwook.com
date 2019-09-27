@@ -5,6 +5,9 @@ import { NextPage } from "next";
 
 import fetch from "cross-fetch";
 
+import Box from "@material-ui/core/Box";
+import Typography from "@material-ui/core/Typography";
+
 import Layout from "../../components/layout";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
@@ -17,12 +20,12 @@ const Post: NextPage<Props> = ({ title, sections }) => (
       <title>{title}::johnwook.com</title>
     </Head>
 
-    <div>
-      <h1>{title}</h1>
+    <Box mt={3}>
+      <Typography variant="h5">{title}</Typography>
       {sections.map(b => (
         <p key={b.id}>{b.value}</p>
       ))}
-    </div>
+    </Box>
   </Layout>
 );
 
