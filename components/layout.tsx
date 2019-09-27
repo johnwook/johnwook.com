@@ -1,13 +1,28 @@
+import AppBar from "@material-ui/core/AppBar";
+import Box from "@material-ui/core/Box";
 import Container from "@material-ui/core/Container";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
+
 import Head from "next/head";
+import Link from "next/link";
 
 const Layout = ({ children }) => (
-  <Container maxWidth="sm">
-    <Head>
-      <title>johnwook.com</title>
-    </Head>
-    {children}
-  </Container>
+  <Box>
+    <AppBar position="sticky" color="default">
+      <Toolbar>
+        <Link href="/">
+          <Typography variant="h6">Johnwook.com</Typography>
+        </Link>
+      </Toolbar>
+    </AppBar>
+    <Container maxWidth="sm">
+      <Head>
+        <title>johnwook.com</title>
+      </Head>
+      {children}
+    </Container>
+  </Box>
 );
 
 export default Layout;
