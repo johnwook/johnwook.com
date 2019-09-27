@@ -23,7 +23,9 @@ const Post: NextPage<Props> = ({ title, sections }) => (
     <Box mt={3}>
       <Typography variant="h5">{title}</Typography>
       {sections.map(b => (
-        <p key={b.id}>{b.value}</p>
+        <Box key={b.id} my={2}>
+          <Typography variant="body2">{b.value}</Typography>
+        </Box>
       ))}
     </Box>
   </Layout>
