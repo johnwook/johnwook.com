@@ -4,7 +4,10 @@ import Link from "next/link";
 import { NextPage } from "next";
 
 import fetch from "cross-fetch";
-import Image from "material-ui-image";
+import Card from "@material-ui/core/Card";
+import CardContent from "@material-ui/core/CardContent";
+import CardMedia from "@material-ui/core/CardMedia";
+import Typography from "@material-ui/core/Typography";
 
 import Layout from "../components/layout";
 import { HomeData } from "../data/home";
@@ -14,13 +17,16 @@ type Props = HomeData;
 
 const Home: NextPage<Props> = ({ posts, sections }) => (
   <Layout>
-    <div>
-      {sections.map(b => (
-        <div key={b.id}>
-          <Image src={b.value} />
-        </div>
-      ))}
-    </div>
+    <Card>
+      <CardMedia component="img" image={sections[0].value} />
+      <CardContent>
+        <Typography
+          variant="body2"
+          color="textSecondary"
+          component="p"
+        ></Typography>
+      </CardContent>
+    </Card>
 
     <div>
       {posts.map(p => (
