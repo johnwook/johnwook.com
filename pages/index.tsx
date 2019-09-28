@@ -39,7 +39,22 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
           {posts.map(post => (
             <Link key={post.id} href={"/posts/[pid]"} as={`/posts/${post.id}`}>
               <ListItem button component="a">
-                <ListItemText primary={post.title} />
+                <ListItemText
+                  primary={
+                    <React.Fragment>
+                      <Typography
+                        component="span"
+                        variant="caption"
+                        color="textSecondary"
+                      >
+                        19.09.26
+                      </Typography>
+                      <Typography component="span" variant="subtitle1">
+                        {" " + post.title}
+                      </Typography>
+                    </React.Fragment>
+                  }
+                />
               </ListItem>
             </Link>
           ))}
