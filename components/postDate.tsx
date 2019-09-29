@@ -15,7 +15,7 @@ const PostDate = (props: Props) => {
     <NoSsr>
       <Box>
         <Typography variant="caption" color="textSecondary">
-          {props.title + ": " + format(new Date(props.timestamp), "PPpp")}
+          {props.title + ": " + format(new Date(props.timestamp), "PPp")}
         </Typography>
       </Box>
     </NoSsr>
