@@ -7,6 +7,8 @@ interface Input {
 
 interface Output {
   title: string;
+  createdTime: number;
+  lastEditedTime: number;
   sections: Array<ConvertBlockOutput>;
 }
 
@@ -32,6 +34,8 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
     .map(convertBlock);
 
   return {
+    createdTime: page.value.created_time,
+    lastEditedTime: page.value.last_edited_time,
     title,
     sections
   };

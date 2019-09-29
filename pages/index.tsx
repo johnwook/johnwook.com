@@ -15,6 +15,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Paper from "@material-ui/core/Paper";
 
 import Layout from "../components/layout";
+import PostListDate from "../components/postListDate";
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
 
@@ -39,7 +40,16 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
           {posts.map(post => (
             <Link key={post.id} href={"/posts/[pid]"} as={`/posts/${post.id}`}>
               <ListItem button component="a">
-                <ListItemText primary={post.title} />
+                <ListItemText
+                  primary={
+                    <React.Fragment>
+                      <PostListDate timestamp={post.createdTime} />
+                      <Typography component="span" variant="subtitle1">
+                        {" " + post.title}
+                      </Typography>
+                    </React.Fragment>
+                  }
+                />
               </ListItem>
             </Link>
           ))}

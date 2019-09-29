@@ -9,12 +9,18 @@ import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 
 import Layout from "../../components/layout";
+import PostDate from "../../components/postDate";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
 
 type Props = PostData;
 
-const Post: NextPage<Props> = ({ title, sections }) => (
+const Post: NextPage<Props> = ({
+  createdTime,
+  lastEditedTime,
+  title,
+  sections
+}) => (
   <Layout>
     <Head>
       <title>{title}::johnwook.com</title>
@@ -27,6 +33,8 @@ const Post: NextPage<Props> = ({ title, sections }) => (
           <Typography variant="body2">{b.value}</Typography>
         </Box>
       ))}
+      <PostDate timestamp={createdTime} title="Created" />
+      <PostDate timestamp={lastEditedTime} title="Last edited" />
     </Box>
   </Layout>
 );

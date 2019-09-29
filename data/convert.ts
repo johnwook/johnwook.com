@@ -1,5 +1,7 @@
 interface OutputCommon {
   id: string;
+  createdTime: number;
+  lastEditedTime: number;
 }
 
 interface TextOutput extends OutputCommon {
@@ -20,6 +22,8 @@ interface Block {
     id: string;
     type: string;
     properties: any;
+    created_time: number;
+    last_edited_time: number;
   };
 }
 
@@ -32,7 +36,9 @@ export const convertBlock = (block: Block): BlockOutput => {
       return {
         id: block.value.id,
         type: block.value.type,
-        value: block.value.properties.title[0][0]
+        value: block.value.properties.title[0][0],
+        createdTime: block.value.created_time,
+        lastEditedTime: block.value.last_edited_time
       };
     case "image":
       return {
@@ -40,7 +46,9 @@ export const convertBlock = (block: Block): BlockOutput => {
         type: block.value.type,
         value: `/api/image?url=${encodeURIComponent(
           block.value.properties.source[0][0]
-        )}`
+        )}`,
+        createdTime: block.value.created_time,
+        lastEditedTime: block.value.last_edited_time
       };
     default:
       break;
@@ -61,7 +69,7 @@ interface Collection {
 interface CollectionItem {
   title: string;
   id: string;
-  createdAt: number;
+  createdTime: number;
 }
 
 type CollectionOutput = CollectionItem[];
@@ -81,7 +89,7 @@ export const convertCollection = (
     return {
       id: blockId,
       title: item.value.properties.title[0][0],
-      createdAt: item.value.created_time
+      createdTime: item.value.created_time
     };
   });
 };
