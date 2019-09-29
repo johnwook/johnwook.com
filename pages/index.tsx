@@ -15,6 +15,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Paper from "@material-ui/core/Paper";
 
 import Layout from "../components/layout";
+import PostListDate from "../components/postListDate";
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
 
@@ -42,13 +43,7 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
                 <ListItemText
                   primary={
                     <React.Fragment>
-                      <Typography
-                        component="span"
-                        variant="caption"
-                        color="textSecondary"
-                      >
-                        19.09.26
-                      </Typography>
+                      <PostListDate timestamp={post.createdTime} />
                       <Typography component="span" variant="subtitle1">
                         {" " + post.title}
                       </Typography>
