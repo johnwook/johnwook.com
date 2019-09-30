@@ -58,15 +58,7 @@ const defaultLoader = {
 };
 
 const defaultQuery = {
-  aggregate: [
-    {
-      aggregation_type: "count",
-      id: "count",
-      property: "title",
-      type: "title",
-      view_type: "table"
-    }
-  ],
+  aggregate: [],
   filter: [],
   filter_operator: "and",
   sort: []
@@ -76,13 +68,13 @@ const queryCollection = ({
   collectionId,
   collectionViewId,
   loader = defaultLoader,
-  query = defaultQuery
+  query
 }) =>
   rpc("queryCollection", {
     collectionId,
     collectionViewId,
     loader,
-    query
+    query: Object.assign(defaultQuery, query)
   });
 
 export { loadPageChunk, queryCollection };

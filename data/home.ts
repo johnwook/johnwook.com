@@ -30,7 +30,16 @@ export const getData = async (): Promise<Output> => {
 
   const collectionData = await queryCollection({
     collectionId: tableCollection.value.collection_id,
-    collectionViewId: tableCollection.value.view_ids[0]
+    collectionViewId: tableCollection.value.view_ids[0],
+    query: {
+      sort: [
+        {
+          direction: "descending",
+          property: "ns3x",
+          type: "created_time"
+        }
+      ]
+    }
   });
 
   const posts = convertCollection(collectionData);
