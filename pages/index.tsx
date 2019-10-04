@@ -15,7 +15,7 @@ import ListItemText from "@material-ui/core/ListItemText";
 import Paper from "@material-ui/core/Paper";
 
 import Layout from "../components/layout";
-import PostListItemTitle from "../components/postListItemTitle";
+import PostListItem from "../components/postListItem";
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
 
@@ -42,7 +42,7 @@ const Home: NextPage<Props> = ({ posts, sections }) => (
               <ListItem button component="a">
                 <ListItemText
                   primary={
-                    <PostListItemTitle
+                    <PostListItem
                       createdTime={post.createdTime}
                       title={post.title}
                     />
