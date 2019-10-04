@@ -1,16 +1,17 @@
 import React from "react";
 
 import Grid from "@material-ui/core/Grid";
+import NoSsr from "@material-ui/core/NoSsr";
 import Typography from "@material-ui/core/Typography";
 
-import PostListDate from "./postListDate";
+import format from "date-fns/format";
 
 interface Props {
   createdTime: number;
   title: string;
 }
 
-const PostListItemTitle = ({ createdTime, title }: Props) => {
+const PostListItem = ({ createdTime, title }: Props) => {
   return (
     <Grid container wrap="nowrap">
       <Grid item xs={10} zeroMinWidth>
@@ -19,10 +20,14 @@ const PostListItemTitle = ({ createdTime, title }: Props) => {
         </Typography>
       </Grid>
       <Grid item xs={2}>
-        <PostListDate timestamp={createdTime} />
+        <NoSsr>
+          <Typography variant="caption" color="textSecondary">
+            {format(new Date(createdTime), "yy/MM/dd")}
+          </Typography>
+        </NoSsr>
       </Grid>
     </Grid>
   );
 };
 
-export default PostListItemTitle;
+export default PostListItem;
