@@ -50,7 +50,8 @@ export const getData = async (): Promise<Output> => {
     .filter(block => {
       return availableType.indexOf(block.value.type) > -1;
     })
-    .map(convertBlock);
+    .map(convertBlock)
+    .filter(Boolean);
 
   return {
     posts,
