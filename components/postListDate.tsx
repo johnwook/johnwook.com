@@ -11,8 +11,8 @@ interface Props {
 const PostListDate = (props: Props) => {
   return (
     <NoSsr>
-      <Typography component="span" variant="caption" color="textSecondary">
-        {format(new Date(props.timestamp), "yy.MM.dd")}
+      <Typography variant="caption" color="textSecondary">
+        {format(new Date(props.timestamp), "yy/MM/dd")}
       </Typography>
     </NoSsr>
   );
