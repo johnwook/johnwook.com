@@ -6,14 +6,26 @@ import { NextPage } from "next";
 import fetch from "cross-fetch";
 
 import Box from "@material-ui/core/Box";
+import NoSsr from "@material-ui/core/NoSsr";
 import Typography from "@material-ui/core/Typography";
 
+import format from "date-fns/format";
+
 import Layout from "../../components/layout";
-import PostDate from "../../components/postDate";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
 
 type Props = PostData;
+
+const renderDate = (timestamp: number, title: string) => (
+  <NoSsr>
+    <Box>
+      <Typography variant="caption" color="textSecondary">
+        {title + ": " + format(new Date(timestamp), "PPp")}
+      </Typography>
+    </Box>
+  </NoSsr>
+);
 
 const Post: NextPage<Props> = ({
   createdTime,
@@ -33,8 +45,8 @@ const Post: NextPage<Props> = ({
           <Typography variant="body2">{b.value}</Typography>
         </Box>
       ))}
-      <PostDate timestamp={createdTime} title="Created" />
-      <PostDate timestamp={lastEditedTime} title="Last edited" />
+      {renderDate(createdTime, "Created")}
+      {renderDate(lastEditedTime, "Last edited")}
     </Box>
   </Layout>
 );
