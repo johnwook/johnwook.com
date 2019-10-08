@@ -13,9 +13,9 @@
     "@material-ui/styles": "^4.5.0",
     "cross-fetch": "^3.0.4",
     "date-fns": "^2.4.1",
-    "next": "9.0.7",
-    "react": "16.10.2",
-    "react-dom": "16.10.2"
+    "next": "^9.1.1",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
   },
   "devDependencies": {
     "@types/jest": "^24.0.18",
