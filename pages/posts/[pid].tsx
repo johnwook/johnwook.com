@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import format from "date-fns/format";
 
 import Layout from "../../components/layout";
+import PostSections from "../../components/postSections";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
 
@@ -26,28 +27,6 @@ const renderDate = (timestamp: number, title: string) => (
     </Box>
   </NoSsr>
 );
-
-const renderSections = (sections: Props["sections"]) =>
-  sections.map(section => {
-    switch (section.type) {
-      case "header":
-        return (
-          <Typography key={section.id} variant="h6">
-            {section.value}
-          </Typography>
-        );
-      case "text":
-        return (
-          <Box key={section.id} my={1}>
-            <Typography variant="body2">{section.value}</Typography>
-          </Box>
-        );
-      case "image":
-        break;
-      default:
-        break;
-    }
-  });
 
 const Post: NextPage<Props> = ({
   createdTime,
@@ -65,7 +44,7 @@ const Post: NextPage<Props> = ({
     </Box>
 
     <Box>
-      {renderSections(sections)}
+      <PostSections sections={sections} />
       {renderDate(createdTime, "Created")}
       {renderDate(lastEditedTime, "Last edited")}
     </Box>
