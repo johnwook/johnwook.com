@@ -38,8 +38,11 @@ const Post: NextPage<Props> = ({
       <title>{title}::johnwook.com</title>
     </Head>
 
-    <Box mt={3}>
+    <Box my={3}>
       <Typography variant="h5">{title}</Typography>
+    </Box>
+
+    <Box>
       {sections.map(b => (
         <Box key={b.id} my={2}>
           <Typography variant="body2">{b.value}</Typography>
