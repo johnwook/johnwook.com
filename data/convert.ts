@@ -4,15 +4,20 @@ interface OutputCommon {
   lastEditedTime: number;
 }
 
+interface TextValue extends Array<TextValue | string> {}
+
 interface TextOutput extends OutputCommon {
   type: "text";
-  value: string;
+  value: TextValue;
 }
 
 interface ImageOutput extends OutputCommon {
   type: "image";
   value: string;
 }
+
+export type TextBlock = TextOutput;
+export type ImageBlock = ImageOutput;
 
 interface HeaderOutput extends OutputCommon {
   type: "header";
@@ -41,7 +46,7 @@ export const convertBlock = (block: Block): BlockOutput => {
       return {
         id: block.value.id,
         type: block.value.type,
-        value: block.value.properties.title[0][0],
+        value: block.value.properties.title,
         createdTime: block.value.created_time,
         lastEditedTime: block.value.last_edited_time
       };
