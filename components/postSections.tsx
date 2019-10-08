@@ -20,9 +20,9 @@ const renderSection = (section: Props["sections"][0]) => {
       );
     case "text":
       return (
-        <Box key={section.id} my={1}>
-          <Typography variant="body2">{section.value}</Typography>
-        </Box>
+        <Typography key={section.id} variant="body2" paragraph>
+          {section.value}
+        </Typography>
       );
     case "image":
       return <CardMedia component="img" image={section.value} />;
