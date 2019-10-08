@@ -1,6 +1,7 @@
 import React from "react";
 
 import Box from "@material-ui/core/Box";
+import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
 import { PostData } from "../data/post";
@@ -24,7 +25,7 @@ const renderSection = (section: Props["sections"][0]) => {
         </Box>
       );
     case "image":
-      break;
+      return <CardMedia component="img" image={section.value} />;
     default:
       break;
   }
