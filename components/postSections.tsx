@@ -25,7 +25,14 @@ const renderSection = (section: Props["sections"][0]) => {
         </Typography>
       );
     case "image":
-      return <CardMedia component="img" image={section.value} />;
+      return (
+        <CardMedia
+          key={section.id}
+          component="img"
+          image={section.value}
+          onClick={() => window.open(section.value)}
+        />
+      );
     default:
       break;
   }
