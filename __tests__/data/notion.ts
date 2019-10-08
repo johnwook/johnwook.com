@@ -15,7 +15,8 @@ describe.skip("notion api call", () => {
 
     const collection = await queryCollection({
       collectionId,
-      collectionViewId
+      collectionViewId,
+      query: {}
     });
 
     expect(collection).toBeTruthy();
