@@ -27,6 +27,28 @@ const renderDate = (timestamp: number, title: string) => (
   </NoSsr>
 );
 
+const renderSections = (sections: Props["sections"]) =>
+  sections.map(section => {
+    switch (section.type) {
+      case "header":
+        return (
+          <Typography key={section.id} variant="h6">
+            {section.value}
+          </Typography>
+        );
+      case "text":
+        return (
+          <Box key={section.id} my={1}>
+            <Typography variant="body2">{section.value}</Typography>
+          </Box>
+        );
+      case "image":
+        break;
+      default:
+        break;
+    }
+  });
+
 const Post: NextPage<Props> = ({
   createdTime,
   lastEditedTime,
@@ -43,11 +65,7 @@ const Post: NextPage<Props> = ({
     </Box>
 
     <Box>
-      {sections.map(b => (
-        <Box key={b.id} my={2}>
-          <Typography variant="body2">{b.value}</Typography>
-        </Box>
-      ))}
+      {renderSections(sections)}
       {renderDate(createdTime, "Created")}
       {renderDate(lastEditedTime, "Last edited")}
     </Box>
