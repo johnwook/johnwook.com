@@ -22,16 +22,13 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
   const contentIds: string[] = page.value.content;
 
+  const availableType = ["image", "text", "header"];
+
   const sections = contentIds
     .map(id => blocks[id])
-    .filter(block => {
-      if (block.value.type === "text" && block.value.properties) {
-        return true;
-      }
-
-      return false;
-    })
-    .map(convertBlock);
+    .filter(block => availableType.indexOf(block.value.type) > -1)
+    .map(convertBlock)
+    .filter(Boolean);
 
   return {
     createdTime: page.value.created_time,

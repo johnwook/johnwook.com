@@ -1,65 +1,61 @@
 {
   "recordMap": {
     "block": {
-      "6a400436-ae73-464e-acbc-070fdf8d990f": {
+      "5a071643-2313-45b6-80bb-f1896c655951": {
         "role": "reader",
         "value": {
-          "id": "6a400436-ae73-464e-acbc-070fdf8d990f",
-          "version": 48,
+          "id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "version": 87,
           "type": "page",
           "properties": {
             "1Ote": [
               [
-                "book review,essay"
-              ]
-            ],
-            "o.%m": [
-              [
-                "‣",
-                [
-                  [
-                    "d",
-                    {
-                      "type": "date",
-                      "start_date": "2019-09-15"
-                    }
-                  ]
-                ]
+                "tech"
               ]
             ],
             "title": [
               [
-                "The goal, 치아 교정"
+                "Notion + Next.js 로 블로그 만들기"
               ]
             ]
           },
           "content": [
-            "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa",
-            "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b",
-            "fffa4021-b93a-45ac-86a3-3004ebdd4489",
-            "7f63f2bd-80b5-48bf-bab1-12eabb036dbf",
-            "87717be4-c132-4697-b781-1ea891b659f9",
-            "02a950ee-04ee-4f89-9cbd-4d48f8be246f"
+            "017f93eb-f406-454d-9f3a-9eac60b920d7",
+            "657679b5-5f32-4540-a80b-3e6ce12f3e72",
+            "2aabe101-33f4-4e4f-a86a-5c2636a2cc27",
+            "8bf2bb2d-eae0-4c10-b41e-653602df8721",
+            "260fca21-88f7-48a9-9bd1-298235ef4060",
+            "326fd463-6a1e-45b8-b085-b254aa49f582",
+            "45a8e72b-7239-4ca5-a8df-3e5e75c6639e",
+            "fcec527e-7d3e-4544-8bc3-50f0f237dc02",
+            "491ecbb5-eeb4-4b80-8014-5bbd0004ca92",
+            "b0aeb429-cc1b-4fc5-b1b1-aca4aa2196c9",
+            "c9f93afb-85d5-4ef2-8941-3e81a9ec39a6",
+            "60a642b8-d2c1-4394-b990-4bdb5cd03050",
+            "50b2745b-630d-424f-9c1f-25ab1f366e84",
+            "b59fe833-cd62-449f-9094-7c2bb66ae65b",
+            "71eed83d-072a-4434-9042-7b65d0066a9d",
+            "f0d3823e-3b15-4112-87fa-a8e1f1b4a4f4",
+            "87793a8a-4783-4a51-a1bb-e6c6b7d41bcd",
+            "108f24e9-15b3-4564-ad32-990516ca0dfd",
+            "676573a5-469b-4a9d-9ed0-fb4448a470b1",
+            "770c2da5-7376-4c1f-a546-bdd73bb04465",
+            "030f190d-44d3-416c-9c7d-2242adcf0fa8"
           ],
-          "format": {
-            "block_locked": false,
-            "block_locked_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a"
-          },
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569047700000,
+          "created_time": 1570517580000,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569054000000,
+          "last_edited_time": 1570517640000,
           "parent_id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
           "parent_table": "collection",
-          "alive": true,
-          "copied_from": "05a1bdcb-938a-49c7-af52-b0a5d1c51b55"
+          "alive": true
         }
       },
       "3d9510bf-90be-46cd-9332-98baec648732": {
         "role": "reader",
         "value": {
           "id": "3d9510bf-90be-46cd-9332-98baec648732",
-          "version": 6,
+          "version": 18,
           "type": "collection_view",
           "view_ids": [
             "e34c69b8-2bba-42f0-bcea-e581cc6f18ff"
@@ -68,7 +64,7 @@
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
           "created_time": 1568774086222,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569046140000,
+          "last_edited_time": 1570517640000,
           "parent_id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
           "parent_table": "block",
           "alive": true
@@ -78,7 +74,7 @@
         "role": "reader",
         "value": {
           "id": "e740a8ab-2c00-4ea7-8fa0-54c678d40075",
-          "version": 48,
+          "version": 78,
           "type": "page",
           "properties": {
             "title": [
@@ -89,8 +85,10 @@
           },
           "content": [
             "0f199378-952f-45d3-a829-4027ff009261",
+            "e885784a-ffa9-4c30-b0bf-b30794d28c23",
             "3d9510bf-90be-46cd-9332-98baec648732",
-            "629dabd6-1ec8-4fa1-98bf-30723991c249"
+            "08bfed37-4c98-4cc3-b5a1-d1790b982dda",
+            "0682b795-3b9a-4ae1-bdf6-2fa0f7a379c3"
           ],
           "format": {
             "page_icon": "💻"
@@ -109,135 +107,662 @@
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
           "created_time": 1568692920000,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1568858760000,
+          "last_edited_time": 1570411500000,
           "parent_id": "7bebbe1f-b2f1-4352-ac6d-c3b8bedb64a1",
           "parent_table": "space",
           "alive": true
         }
       },
-      "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa": {
+      "017f93eb-f406-454d-9f3a-9eac60b920d7": {
         "role": "reader",
         "value": {
-          "id": "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa",
-          "version": 8,
-          "type": "text",
+          "id": "017f93eb-f406-454d-9f3a-9eac60b920d7",
+          "version": 5,
+          "type": "header",
           "properties": {
             "title": [
               [
-                "지난 주 월요일, 치아 교정을 시작했다. 고르지 못한 치열 때문에 스트레스를 받았던 가장 오래된 기억은 초등학교 6학년, 중학교에 들어갈 즈음이다. 근 20년을 고민했던 것 치고 결정은 아주 잠깐이었다. 좋은 분께 치과를 소개 받고, 상담을 예약하고, 한시간 정도 이리 저리 사진을 찍고, 상태와 치료 방법에 대해 듣고, 아내와 전화통화를 하고, 하겠노라고 했다. 그리고 그날로 교정기를 장착하고 집에 돌아왔다."
+                "Introduction"
               ]
             ]
           },
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569047700000,
+          "created_time": 1570517640000,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569047700000,
-          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
           "parent_table": "block",
           "alive": true
         }
       },
-      "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b": {
+      "657679b5-5f32-4540-a80b-3e6ce12f3e72": {
         "role": "reader",
         "value": {
-          "id": "f8bdc8ef-9233-4123-ad5c-3b4f7a06e63b",
-          "version": 8,
+          "id": "657679b5-5f32-4540-a80b-3e6ce12f3e72",
+          "version": 3,
           "type": "text",
           "properties": {
             "title": [
               [
-                "교정기에 적응하는데 생각보다 시간이 좀 필요했다. 먹는 것도, 양치하는 것도 아직 어색하다. 평소보다 컨디션도 조금 떨어지고, 잠도 조금 늘었다. 오늘에야 조금 편해진 느낌이다. 그런데, 생각보다는 별 게 아니라는 생각이 든다. 오랜 시간 걱정하고 고민했던 것에 비하면 큰 일이 아니었다. 아픔에도, 불편에도, 사람은 적응한다. 고민하던 때와 달라진 가장 큰 점은 불편해졌다는 것이 아니라, 이제 하루 하루 치열이 좋아지고 있다는 것이다."
+                "많은 개발자들이 겪고 있는 병이 있다. 블로그 병이라고 하는데, 보통 다음과 같은 흐름이다."
               ]
             ]
           },
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569047721730,
+          "created_time": 1570517652733,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569047700000,
-          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
           "parent_table": "block",
-          "alive": true
+          "alive": true,
+          "copied_from": "07161025-3b7b-4b18-b0d5-0512accd6495"
         }
       },
-      "fffa4021-b93a-45ac-86a3-3004ebdd4489": {
+      "2aabe101-33f4-4e4f-a86a-5c2636a2cc27": {
         "role": "reader",
         "value": {
-          "id": "fffa4021-b93a-45ac-86a3-3004ebdd4489",
-          "version": 6,
+          "id": "2aabe101-33f4-4e4f-a86a-5c2636a2cc27",
+          "version": 3,
           "type": "text",
           "properties": {
             "title": [
               [
-                "엘리 골드렛, 제프 콕스의 '더 골'을 읽었다. 30년도 더 된 책이지만, 오래 살아남은 책들이 보통 그렇듯이, 메시지가 명확하다. 어떠한 목표를 달성하는 방법은 이렇다. 목표를 올바로 세우고, 목표를 향해 나아가고 있는 지 매순간 점검하고, 부족한 부분을 해결한다. 대부분의 사람은 목표가 없거나, 잘못된 목표를 따라가거나, 목표와 상관없는 행동들로 삶을 열심히, 힘들게 낭비하고 있다."
+                "국내나 해외에서 멋진 글들을 본다. 그 후 블로그를 만들고 멋진 글을 써야겠다는 다짐을 한다. 브런치나 미디엄, wordpress 등의 대안이 있지만 이런저런 이유를 대며 만족하지 않는다. 직접 만들 수 있는 방법들을 찾는다. 각 도구들의 기술적 장단점을 비교한다. 빌드 타임, 확장성, 비용, 속도 등. 장고 끝에 정한 기술로 블로그의 틀을 꾸미기 시작한다. 테스트를 위해 블로그를 시작한다는 내용의 글을 하나 작성한다. 기술적 고민을 너무 열심히 한 탓인지 글은 잘 쓰지 않게 되고 결국 블로그는 죽는다. 그러다 새로운 기술이 나오면 새로운 마음으로 이를 반복한다."
               ]
             ]
           },
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569047721730,
+          "created_time": 1570517652735,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569047700000,
-          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
           "parent_table": "block",
-          "alive": true
+          "alive": true,
+          "copied_from": "888cb4e2-e949-4951-968c-ec00c2e61457"
         }
       },
-      "7f63f2bd-80b5-48bf-bab1-12eabb036dbf": {
+      "8bf2bb2d-eae0-4c10-b41e-653602df8721": {
         "role": "reader",
         "value": {
-          "id": "7f63f2bd-80b5-48bf-bab1-12eabb036dbf",
-          "version": 8,
+          "id": "8bf2bb2d-eae0-4c10-b41e-653602df8721",
+          "version": 3,
           "type": "text",
           "properties": {
             "title": [
               [
-                "문득, 내 인생이 흘러가는 것을 한걸음 떨어져서 방관자처럼 바라보고 있다는 것을 느낄 때가 있다. '아 이러면 안되는데', '누가 나서서 이렇게 좀 해줬으면 좋겠다', '이것만 되면 이렇게 안 산다'. 그러면서도 정작, 생겼으면 하는 그 일을 위해서는 아무 것도 하지 않는다. 바쁘다는 이유로, 어렵다는 핑계로. 다시, 그러면서도, 목표와 관계없는 새로운 일들로 시간을 채우고, 뒤를 돌아보며 같은 소망으로 후회를 대신한다."
+                "오랜만에 블로그 병이 도졌다. 이 글은 그러니까 일종의 투병일기 같은 것이다."
               ]
             ]
           },
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569047721730,
+          "created_time": 1570517652735,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569047700000,
-          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
           "parent_table": "block",
-          "alive": true
+          "alive": true,
+          "copied_from": "6cd74a95-86da-45b7-8f96-10e9ba70dcc1"
         }
       },
-      "87717be4-c132-4697-b781-1ea891b659f9": {
+      "260fca21-88f7-48a9-9bd1-298235ef4060": {
         "role": "reader",
         "value": {
-          "id": "87717be4-c132-4697-b781-1ea891b659f9",
-          "version": 6,
+          "id": "260fca21-88f7-48a9-9bd1-298235ef4060",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "발단"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652735,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "29acbb1f-95be-49c4-ab4c-d16a2d474023"
+        }
+      },
+      "326fd463-6a1e-45b8-b085-b254aa49f582": {
+        "role": "reader",
+        "value": {
+          "id": "326fd463-6a1e-45b8-b085-b254aa49f582",
+          "version": 3,
           "type": "text",
           "properties": {
             "title": [
               [
-                "원하는 것을 얻는 법이나 성공적인 인생을 사는 법에는 공통점이 있다. 주체적으로, 원하는 것을 얻기 위한 방향으로 매일을 살아가라는 것이다. '치열이 좋았으면'이라고 소망만 했던 지난 20년 보다, 교정기의 불편함과 어렵지 않은 싸움을 했던 지난 일주일이 내 인생에 더 큰 도움이 됐다."
+                "ZEIT",
+                [
+                  [
+                    "a",
+                    "https://zeit.co"
+                  ]
+                ]
+              ],
+              [
+                " 의 products 를 예전부터 흥미롭게 보고 있었다. 그러다 "
+              ],
+              [
+                "Introducing Serverless Pre-Rendering (SPR)",
+                [
+                  [
+                    "a",
+                    "https://zeit.co/blog/serverless-pre-rendering"
+                  ]
+                ]
+              ],
+              [
+                " 글을 읽고 이거다 싶었다. 게다가 notion 도 쓰고 있었으니 병이 도질 수밖에."
               ]
             ]
           },
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569047721731,
+          "created_time": 1570517652736,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569047700000,
-          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
           "parent_table": "block",
-          "alive": true
+          "alive": true,
+          "copied_from": "d90c9167-8e8e-4622-a6f4-b6bfd7946932"
         }
       },
-      "02a950ee-04ee-4f89-9cbd-4d48f8be246f": {
+      "45a8e72b-7239-4ca5-a8df-3e5e75c6639e": {
         "role": "reader",
         "value": {
-          "id": "02a950ee-04ee-4f89-9cbd-4d48f8be246f",
+          "id": "45a8e72b-7239-4ca5-a8df-3e5e75c6639e",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "Domain 구입"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652736,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "cfb09e13-8ab3-4557-a09a-a969558dba7f"
+        }
+      },
+      "fcec527e-7d3e-4544-8bc3-50f0f237dc02": {
+        "role": "reader",
+        "value": {
+          "id": "fcec527e-7d3e-4544-8bc3-50f0f237dc02",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "우선 돈부터 써야 하니, 도메인을 구입했다. 한번 구입했다가 운영하지 못하고 포기한 "
+              ],
+              [
+                "johnwook.com",
+                [
+                  [
+                    "a",
+                    "http://johnwook.com"
+                  ]
+                ]
+              ],
+              [
+                " 은 다행히 아무도 안 사가고 잘 있었다. "
+              ],
+              [
+                "Zeit.co",
+                [
+                  [
+                    "a",
+                    "http://zeit.co"
+                  ]
+                ]
+              ],
+              [
+                " 에서 12$에 샀다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652736,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "9dcc4220-fb2b-4ee1-b18b-4b575afaf338"
+        }
+      },
+      "491ecbb5-eeb4-4b80-8014-5bbd0004ca92": {
+        "role": "reader",
+        "value": {
+          "id": "491ecbb5-eeb4-4b80-8014-5bbd0004ca92",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "Now + Next.js 설정"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652736,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "88b65498-2977-47b1-9dfc-ea7c87a92b16"
+        }
+      },
+      "b0aeb429-cc1b-4fc5-b1b1-aca4aa2196c9": {
+        "role": "reader",
+        "value": {
+          "id": "b0aeb429-cc1b-4fc5-b1b1-aca4aa2196c9",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "예전에 한번 써본 적이 있었지만, 그 사이에 업데이트도 많이 됐고 해서 문서를 많이 읽었다. "
+              ],
+              [
+                "문서",
+                [
+                  [
+                    "a",
+                    "https://zeit.co/blog/serverless-pre-rendering"
+                  ]
+                ]
+              ],
+              [
+                "화가 "
+              ],
+              [
+                "잘",
+                [
+                  [
+                    "a",
+                    "https://nextjs.org/docs"
+                  ]
+                ]
+              ],
+              [
+                " 되어 있고, "
+              ],
+              [
+                "github integration",
+                [
+                  [
+                    "a",
+                    "https://zeit.co/github"
+                  ]
+                ]
+              ],
+              [
+                " 도 깔끔해서 설정하는 과정이 굉장히 깔끔하고 좋았다. 문제가 없지는 않았지만, 대부분은 내가 문제 였다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652737,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "d29f3d43-91f2-4a47-bfb1-ff7f1e175727"
+        }
+      },
+      "c9f93afb-85d5-4ef2-8941-3e81a9ec39a6": {
+        "role": "reader",
+        "value": {
+          "id": "c9f93afb-85d5-4ef2-8941-3e81a9ec39a6",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "CDN 설정"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652737,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "332f6e8e-8105-433f-acda-47cdc7c208d3"
+        }
+      },
+      "60a642b8-d2c1-4394-b990-4bdb5cd03050": {
+        "role": "reader",
+        "value": {
+          "id": "60a642b8-d2c1-4394-b990-4bdb5cd03050",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "이 발병의 원인이 되었던 블로그 글을 한 줄로 요약하면, "
+              ],
+              [
+                "stale-while-revalidate",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                "를 지원한다는 것이다. 이 옵션이 무엇인지 이해하기 위해서 "
+              ],
+              [
+                "글을",
+                [
+                  [
+                    "a",
+                    "https://web.dev/stale-while-revalidate"
+                  ]
+                ]
+              ],
+              [
+                " 읽었다. 실제로 이를 적용하는 과정은 "
+              ],
+              [
+                "now.json",
+                [
+                  [
+                    "c"
+                  ],
+                  [
+                    "a",
+                    "https://zeit.co/docs/v2/advanced/configuration/"
+                  ]
+                ]
+              ],
+              [
+                " 을 통해서 쉽게 할 수 있었다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652738,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "91b020dc-0db1-4fc2-841c-43a88da04637"
+        }
+      },
+      "50b2745b-630d-424f-9c1f-25ab1f366e84": {
+        "role": "reader",
+        "value": {
+          "id": "50b2745b-630d-424f-9c1f-25ab1f366e84",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "Notion API"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652738,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "1859c36f-2517-4f37-b455-c7f6a4ae7ba4"
+        }
+      },
+      "b59fe833-cd62-449f-9094-7c2bb66ae65b": {
+        "role": "reader",
+        "value": {
+          "id": "b59fe833-cd62-449f-9094-7c2bb66ae65b",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "이 부분이 제일 귀찮았다. Notion 이 아직 공식적인 API 를 지원하지 않는 덕에, 블로그와 관련된 페이지를 public 으로 만들고 network request 를 열어서 일일이 형식을 확인해야했다. 지금도 블로그에 보이기 위한 최소한의 기능만 있고, 필요에 따라 조금씩 덕지덕지 추가하고 있다. "
+              ],
+              [
+                "fx",
+                [
+                  [
+                    "a",
+                    "https://github.com/antonmedv/fx"
+                  ]
+                ]
+              ],
+              [
+                "와 firefox dev tools 가 큰 도움이 됐다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652738,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "a041496a-d397-4e58-b320-f672a8c4b1f8"
+        }
+      },
+      "71eed83d-072a-4434-9042-7b65d0066a9d": {
+        "role": "reader",
+        "value": {
+          "id": "71eed83d-072a-4434-9042-7b65d0066a9d",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "요약"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652739,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "ce37f1a5-e117-4e92-9b28-040bc88dfdbf"
+        }
+      },
+      "f0d3823e-3b15-4112-87fa-a8e1f1b4a4f4": {
+        "role": "reader",
+        "value": {
+          "id": "f0d3823e-3b15-4112-87fa-a8e1f1b4a4f4",
+          "version": 3,
+          "type": "image",
+          "properties": {
+            "source": [
+              [
+                "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0e4a662-115c-4d56-b23f-89281e6af8b5/Untitled.png"
+              ]
+            ]
+          },
+          "format": {
+            "block_width": 1190,
+            "display_source": "https://s3-us-west-2.amazonaws.com/secure.notion-static.com/e0e4a662-115c-4d56-b23f-89281e6af8b5/Untitled.png",
+            "block_full_width": false,
+            "block_page_width": true,
+            "block_aspect_ratio": 0.28907563025210087,
+            "block_preserve_scale": true
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652740,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "bb47ecb3-68d8-4f27-8b1f-7ebf1353d7fc",
+          "file_ids": [
+            "e0e4a662-115c-4d56-b23f-89281e6af8b5"
+          ]
+        }
+      },
+      "87793a8a-4783-4a51-a1bb-e6c6b7d41bcd": {
+        "role": "reader",
+        "value": {
+          "id": "87793a8a-4783-4a51-a1bb-e6c6b7d41bcd",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "요약하면, (1&2) "
+              ],
+              [
+                "johnwook.com",
+                [
+                  [
+                    "a",
+                    "http://johnwook.com"
+                  ]
+                ]
+              ],
+              [
+                " 에 접속하는 (거의) 모든 유저는 항상 CDN 으로부터 (따라서 꽤 빠른) 응답을 받는다. (3)"
+              ],
+              [
+                "stale-while-revalidate",
+                [
+                  [
+                    "c"
+                  ]
+                ]
+              ],
+              [
+                " directive 를 지원하는 Smart CDN 은 Now 로 배포된 서버(serverless function)에 필요할 때 CDN data 의 갱신을 비동기로 요청한다. 비동기이기 때문에 이 때도 유저는 (2) 로부터의 응답을 받는다. (4) Now server 는 Notion 의 (비공식, 누더기) API 를 통해서 필요한 데이터를 가져온다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652741,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "a4aaf6a0-918b-40db-a83b-6cf5a126cd44"
+        }
+      },
+      "108f24e9-15b3-4564-ad32-990516ca0dfd": {
+        "role": "reader",
+        "value": {
+          "id": "108f24e9-15b3-4564-ad32-990516ca0dfd",
+          "version": 3,
+          "type": "header",
+          "properties": {
+            "title": [
+              [
+                "Outro"
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652741,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "33315c0a-2fa3-4e73-99f9-1d36640a97e7"
+        }
+      },
+      "676573a5-469b-4a9d-9ed0-fb4448a470b1": {
+        "role": "reader",
+        "value": {
+          "id": "676573a5-469b-4a9d-9ed0-fb4448a470b1",
+          "version": 3,
+          "type": "text",
+          "properties": {
+            "title": [
+              [
+                "(그럴 일은 없겠지만) 블로그에 꽤나 많은 트래픽이 몰려도 높은 속도의 응답을 괜찮은 비용으로 처리할 수 있는 구조를 구현했다. 게다가 Notion 에 글을 쓰면 블로그에 자동으로 반영되니, 어디서든 글을 쓰고 고칠 수 있게 됐다. 사실, 블로그 운영에 가장 필수적인 건 일단 글을 쓰는 것이다. 글이나 꾸준히 잘 쓰자."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652741,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "b4dfc95f-daeb-44ab-8f91-36218f8c423e"
+        }
+      },
+      "770c2da5-7376-4c1f-a546-bdd73bb04465": {
+        "role": "reader",
+        "value": {
+          "id": "770c2da5-7376-4c1f-a546-bdd73bb04465",
+          "version": 3,
+          "type": "bulleted_list",
+          "properties": {
+            "title": [
+              [
+                "블로그와 관련된 모든 소스코드는 "
+              ],
+              [
+                "https://github.com/johnwook/johnwook.com/",
+                [
+                  [
+                    "a",
+                    "https://github.com/johnwook/johnwook.com/"
+                  ]
+                ]
+              ],
+              [
+                " 에 공개하고 있다."
+              ]
+            ]
+          },
+          "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "created_time": 1570517652742,
+          "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
+          "parent_table": "block",
+          "alive": true,
+          "copied_from": "162216c0-a063-45b3-957b-b3ce597ad64f"
+        }
+      },
+      "030f190d-44d3-416c-9c7d-2242adcf0fa8": {
+        "role": "reader",
+        "value": {
+          "id": "030f190d-44d3-416c-9c7d-2242adcf0fa8",
           "version": 3,
           "type": "text",
           "created_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "created_time": 1569049800000,
+          "created_time": 1570517652742,
           "last_edited_by": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "last_edited_time": 1569049800000,
-          "parent_id": "6a400436-ae73-464e-acbc-070fdf8d990f",
+          "last_edited_time": 1570517640000,
+          "parent_id": "5a071643-2313-45b6-80bb-f1896c655951",
           "parent_table": "block",
-          "alive": true
+          "alive": true,
+          "copied_from": "9d9787d3-5594-4ef8-9609-d92344e0a8ba"
         }
       }
     },
@@ -246,7 +771,7 @@
         "role": "reader",
         "value": {
           "id": "7226e9a0-9a13-454b-866c-03ba71fcb423",
-          "version": 18,
+          "version": 29,
           "name": [
             [
               "Articles"
@@ -266,12 +791,17 @@
                   "id": "448173b3-bd65-4f10-84fd-92be0243098d",
                   "color": "yellow",
                   "value": "book review"
+                },
+                {
+                  "id": "714f149d-0af9-4451-9a9a-cb06bb8f1e29",
+                  "color": "purple",
+                  "value": "tech"
                 }
               ]
             },
-            "o.%m": {
-              "name": "Published",
-              "type": "date"
+            "ns3x": {
+              "name": "CreatedTime",
+              "type": "created_time"
             },
             "title": {
               "name": "Title",
@@ -304,7 +834,7 @@
         "role": "reader",
         "value": {
           "id": "e17104ef-8b69-4d3f-a404-dca3f8235c0a",
-          "version": 28,
+          "version": 36,
           "email": "john.wook.choi@gmail.com",
           "given_name": "Johnwook",
           "family_name": "Choi",
@@ -319,10 +849,18 @@
         "role": "reader",
         "value": {
           "id": "e34c69b8-2bba-42f0-bcea-e581cc6f18ff",
-          "version": 3,
+          "version": 20,
           "type": "table",
           "name": "Default View",
           "query": {
+            "sort": [
+              {
+                "id": "1e9e7003-cf2b-4140-8ac9-33fa240fb2da",
+                "type": "created_time",
+                "property": "ns3x",
+                "direction": "descending"
+              }
+            ],
             "aggregate": [
               {
                 "id": "count",
@@ -331,7 +869,8 @@
                 "view_type": "table",
                 "aggregation_type": "count"
               }
-            ]
+            ],
+            "filter_operator": "and"
           },
           "format": {
             "table_wrap": true,
@@ -347,9 +886,8 @@
                 "property": "1Ote"
               },
               {
-                "width": 200,
                 "visible": true,
-                "property": "o.%m"
+                "property": "ns3x"
               }
             ]
           },
@@ -357,8 +895,12 @@
           "parent_table": "block",
           "alive": true,
           "page_sort": [
-            "27bd2bd5-aec0-440e-b77e-df775ce49e6f",
+            "051e5520-42ae-42c7-a7f4-fa7485988e28",
             "6a400436-ae73-464e-acbc-070fdf8d990f",
+            "5a071643-2313-45b6-80bb-f1896c655951",
+            "925a3ae8-3806-432f-855f-ce400a4dc5c5",
+            "8234a6c8-9053-4d0c-9712-d09a5fe3daae",
+            "27bd2bd5-aec0-440e-b77e-df775ce49e6f",
             "c24de63f-aa89-4d00-9492-2d9faafbe1fa"
           ]
         }

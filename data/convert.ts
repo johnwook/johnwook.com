@@ -4,9 +4,11 @@ interface OutputCommon {
   lastEditedTime: number;
 }
 
+type TextValue = Array<string | Array<string[]>>;
+
 interface TextOutput extends OutputCommon {
   type: "text";
-  value: string;
+  value: TextValue[];
 }
 
 interface ImageOutput extends OutputCommon {
@@ -14,7 +16,15 @@ interface ImageOutput extends OutputCommon {
   value: string;
 }
 
-type BlockOutput = TextOutput | ImageOutput;
+export type TextBlock = TextOutput;
+export type ImageBlock = ImageOutput;
+
+interface HeaderOutput extends OutputCommon {
+  type: "header";
+  value: string;
+}
+
+type BlockOutput = TextOutput | ImageOutput | HeaderOutput;
 export type ConvertBlockOutput = BlockOutput;
 
 interface Block {
@@ -36,7 +46,7 @@ export const convertBlock = (block: Block): BlockOutput => {
       return {
         id: block.value.id,
         type: block.value.type,
-        value: block.value.properties.title[0][0],
+        value: block.value.properties.title,
         createdTime: block.value.created_time,
         lastEditedTime: block.value.last_edited_time
       };
@@ -47,6 +57,14 @@ export const convertBlock = (block: Block): BlockOutput => {
         value: `/api/image?url=${encodeURIComponent(
           block.value.properties.source[0][0]
         )}`,
+        createdTime: block.value.created_time,
+        lastEditedTime: block.value.last_edited_time
+      };
+    case "header":
+      return {
+        id: block.value.id,
+        type: block.value.type,
+        value: block.value.properties.title[0][0],
         createdTime: block.value.created_time,
         lastEditedTime: block.value.last_edited_time
       };

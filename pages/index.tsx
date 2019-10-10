@@ -21,14 +21,14 @@ import { getBaseUrl } from "../urlHelper";
 
 type Props = HomeData;
 
-const Home: NextPage<Props> = ({ posts, sections }) => (
+const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
   <Layout>
     <Box mt={1}>
       <Card>
-        <CardMedia component="img" image={sections[0].value} />
+        <CardMedia component="img" image={cardImage.value} />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {sections[1].value}
+            {cardText.value}
           </Typography>
         </CardContent>
       </Card>

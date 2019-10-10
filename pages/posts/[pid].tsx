@@ -12,6 +12,7 @@ import Typography from "@material-ui/core/Typography";
 import format from "date-fns/format";
 
 import Layout from "../../components/layout";
+import PostSections from "../../components/postSections";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
 
@@ -38,13 +39,12 @@ const Post: NextPage<Props> = ({
       <title>{title}::johnwook.com</title>
     </Head>
 
-    <Box mt={3}>
+    <Box my={3}>
       <Typography variant="h5">{title}</Typography>
-      {sections.map(b => (
-        <Box key={b.id} my={2}>
-          <Typography variant="body2">{b.value}</Typography>
-        </Box>
-      ))}
+    </Box>
+
+    <Box>
+      <PostSections sections={sections} />
       {renderDate(createdTime, "Created")}
       {renderDate(lastEditedTime, "Last edited")}
     </Box>
