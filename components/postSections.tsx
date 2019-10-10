@@ -1,6 +1,7 @@
 import React from "react";
 
 import Box from "@material-ui/core/Box";
+import Link from "@material-ui/core/Link";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
@@ -21,7 +22,29 @@ const renderSection = (section: Props["sections"][0]) => {
     case "text":
       return (
         <Typography key={section.id} variant="body2" paragraph>
-          {section.value}
+          {section.value.map((s, index) => {
+            if (s.length === 1) {
+              return s[0];
+            } else {
+              console.log(section.value);
+              switch (s[1][0][0]) {
+                case "c":
+                  return <code key={section.id + index}>{s[0]}</code>;
+                case "a":
+                  return (
+                    <Link
+                      key={section.id + index}
+                      href={s[1][0][1]}
+                      target="_blank"
+                    >
+                      {s[0]}
+                    </Link>
+                  );
+                default:
+                  return s[0];
+              }
+            }
+          })}
         </Typography>
       );
     case "image":
