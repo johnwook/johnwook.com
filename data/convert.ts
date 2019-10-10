@@ -4,11 +4,11 @@ interface OutputCommon {
   lastEditedTime: number;
 }
 
-interface TextValue extends Array<TextValue | string> {}
+type TextValue = Array<string | Array<string[]>>;
 
 interface TextOutput extends OutputCommon {
   type: "text";
-  value: TextValue;
+  value: TextValue[];
 }
 
 interface ImageOutput extends OutputCommon {
