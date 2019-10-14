@@ -40,13 +40,10 @@ interface Block {
 export const convertBlock = (block: Block): BlockOutput => {
   switch (block.value.type) {
     case "text":
-      if (!block.value.properties) {
-        break;
-      }
       return {
         id: block.value.id,
         type: block.value.type,
-        value: block.value.properties.title,
+        value: block.value.properties ? block.value.properties.title : [""],
         createdTime: block.value.created_time,
         lastEditedTime: block.value.last_edited_time
       };

@@ -27,8 +27,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
   const sections = contentIds
     .map(id => blocks[id])
     .filter(block => availableType.indexOf(block.value.type) > -1)
-    .map(convertBlock)
-    .filter(Boolean);
+    .map(convertBlock);
 
   return {
     createdTime: page.value.created_time,
