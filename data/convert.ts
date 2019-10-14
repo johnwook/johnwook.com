@@ -103,7 +103,8 @@ export const convertCollection = (
 
     return {
       id: blockId,
-      title: item.value.properties.title[0][0],
+      title:
+        item.value.format.page_icon + " " + item.value.properties.title[0][0],
       createdTime: item.value.created_time
     };
   });
