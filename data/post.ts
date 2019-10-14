@@ -18,7 +18,10 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
   } = await loadPageChunk({ pageId });
 
   const page = blocks[pageId];
-  const title = page.value.properties.title[0][0];
+  const emoji = page.value.format.page_icon;
+  const titleText = page.value.properties.title[0][0];
+
+  const title = emoji ? emoji + " " + titleText : titleText;
 
   const contentIds: string[] = page.value.content;
 
