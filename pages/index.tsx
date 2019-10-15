@@ -1,5 +1,6 @@
 import React from "react";
 
+import Head from "next/head";
 import Link from "next/link";
 import { NextPage } from "next";
 
@@ -23,6 +24,12 @@ type Props = HomeData;
 
 const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
   <Layout>
+    <Head>
+      <meta property="og:url" content="https://johnwook.com" />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content="johnwook.com" />
+      <meta property="og:description" content="blog of johnwook" />
+    </Head>
     <Box mt={1}>
       <Card>
         <CardMedia component="img" image={cardImage.value} />

@@ -30,6 +30,7 @@ const renderDate = (timestamp: number, title: string) => (
 
 const Post: NextPage<Props> = ({
   createdTime,
+  id,
   lastEditedTime,
   title,
   sections
@@ -37,6 +38,10 @@ const Post: NextPage<Props> = ({
   <Layout>
     <Head>
       <title>{title}::johnwook.com</title>
+      <meta property="og:url" content={"https://johnwook.com/posts/" + id} />
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title + "::johnwook.com"} />
+      <meta property="og:description" content={sections[0].value as string} />
     </Head>
 
     <Box my={3}>
