@@ -6,6 +6,7 @@ interface Input {
 }
 
 interface Output {
+  id: string;
   title: string;
   createdTime: number;
   lastEditedTime: number;
@@ -34,6 +35,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
 
   return {
     createdTime: page.value.created_time,
+    id: pageId,
     lastEditedTime: page.value.last_edited_time,
     title,
     sections
