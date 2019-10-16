@@ -7,6 +7,7 @@ interface Input {
 
 interface Output {
   id: string;
+  tags: string[];
   title: string;
   createdTime: number;
   lastEditedTime: number;
@@ -21,11 +22,11 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
   const page = blocks[pageId];
   const emoji = page.value.format.page_icon;
   const titleText = page.value.properties.title[0][0];
-
   const title = emoji ? emoji + " " + titleText : titleText;
 
-  const contentIds: string[] = page.value.content;
+  const tags = page.value.properties["1Ote"];
 
+  const contentIds: string[] = page.value.content;
   const availableType = ["image", "text", "header"];
 
   const sections = contentIds
@@ -37,6 +38,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
     createdTime: page.value.created_time,
     id: pageId,
     lastEditedTime: page.value.last_edited_time,
+    tags,
     title,
     sections
   };
