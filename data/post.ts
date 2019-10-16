@@ -24,7 +24,7 @@ export const getData = async ({ pageId }: Input): Promise<Output> => {
   const titleText = page.value.properties.title[0][0];
   const title = emoji ? emoji + " " + titleText : titleText;
 
-  const tags = page.value.properties["1Ote"];
+  const tags = page.value.properties["1Ote"][0][0].split(",");
 
   const contentIds: string[] = page.value.content;
   const availableType = ["image", "text", "header"];
