@@ -6,14 +6,14 @@ import { convertBlock, convertCollection } from "../../data/convert";
 describe("convert notion's loadPageChunk api result block to proper objects", () => {
   test("converts text type block", () => {
     // given
-    const textBlockId = "aa15013c-ebd7-4dcc-813b-71c5dcf3b9fa";
+    const textBlockId = "b59fe833-cd62-449f-9094-7c2bb66ae65b";
     const textBlock = postPageData.recordMap.block[textBlockId];
     // when
     const result = convertBlock(textBlock);
     // then
     expect(result.type).toBe("text");
     expect(result.id).toBe(textBlockId);
-    expect(typeof result.value).toBe("string");
+    expect(typeof result.value).toBe("object");
   });
 
   test("converts image type block", () => {
