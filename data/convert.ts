@@ -87,25 +87,35 @@ interface CollectionItem {
   createdTime: number;
 }
 
-type CollectionOutput = CollectionItem[];
+interface CollectionOutput {
+  posts: CollectionItem[];
+  tags: Array<{
+    id: string;
+    value: string;
+  }>;
+}
+
 export type ConvertCollectionOutput = CollectionOutput;
 
 export const convertCollection = (
   collectionData: Collection
 ): CollectionOutput => {
   const {
-    recordMap: { block },
+    recordMap: { block, collection },
     result: { blockIds }
   } = collectionData;
 
-  return blockIds.map(blockId => {
-    const item = block[blockId];
+  return {
+    posts: blockIds.map(blockId => {
+      const item = block[blockId];
 
-    return {
-      id: blockId,
-      title:
-        item.value.format.page_icon + " " + item.value.properties.title[0][0],
-      createdTime: item.value.created_time
-    };
-  });
+      return {
+        id: blockId,
+        title:
+          item.value.format.page_icon + " " + item.value.properties.title[0][0],
+        createdTime: item.value.created_time
+      };
+    }),
+    tags: collection[Object.keys(collection)[0]].schema["1Ote"].options
+  };
 };
