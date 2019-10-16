@@ -7,7 +7,7 @@ interface Input {
 
 interface Output {
   tid: string;
-  posts: ConvertCollectionOutput;
+  posts: ConvertCollectionOutput["posts"];
 }
 
 const collectionId = "7226e9a0-9a13-454b-866c-03ba71fcb423";
@@ -35,7 +35,7 @@ export const getData = async ({ tid }: Input): Promise<Output> => {
     }
   });
 
-  const posts = convertCollection(collectionData);
+  const { posts } = convertCollection(collectionData);
 
   return {
     tid,

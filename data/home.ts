@@ -10,7 +10,8 @@ import {
 interface Output {
   cardImage: ImageBlock;
   cardText: TextBlock;
-  posts: ConvertCollectionOutput;
+  posts: ConvertCollectionOutput["posts"];
+  tags: ConvertCollectionOutput["tags"];
 }
 
 const pageId = "e740a8ab-2c00-4ea7-8fa0-54c678d40075";
@@ -51,12 +52,13 @@ export const getData = async (): Promise<Output> => {
     }
   });
 
-  const posts = convertCollection(collectionData);
+  const { posts, tags } = convertCollection(collectionData);
 
   return {
     cardImage,
     cardText,
-    posts
+    posts,
+    tags
   };
 };
 
