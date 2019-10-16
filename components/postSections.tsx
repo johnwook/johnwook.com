@@ -5,11 +5,35 @@ import Link from "@material-ui/core/Link";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 
+import { TextValue } from "../data/convert";
 import { PostData } from "../data/post";
 
 interface Props {
   sections: PostData["sections"];
 }
+
+export const renderTextSection = (value: TextValue[]) => {
+  return value.map((s, i) => {
+    if (s.length === 1) {
+      return s[0];
+    } else {
+      return (s[1] as string[][]).reduce((a, c, i2) => {
+        switch (c[0]) {
+          case "c":
+            return <code key={i + "-" + i2}>{a}</code>;
+          case "a":
+            return (
+              <Link key={i + "-" + i2} href={c[1]} target="_blank">
+                {a}
+              </Link>
+            );
+          default:
+            return a;
+        }
+      }, s[0]);
+    }
+  });
+};
 
 const renderSection = (section: Props["sections"][0]) => {
   switch (section.type) {
@@ -22,30 +46,7 @@ const renderSection = (section: Props["sections"][0]) => {
     case "text":
       return (
         <Typography key={section.id} variant="body2" paragraph>
-          {section.value.map((s, i) => {
-            if (s.length === 1) {
-              return s[0];
-            } else {
-              return (s[1] as string[][]).reduce((a, c, i2) => {
-                switch (c[0]) {
-                  case "c":
-                    return <code key={section.id + i + i2}>{a}</code>;
-                  case "a":
-                    return (
-                      <Link
-                        key={section.id + i + i2}
-                        href={c[1]}
-                        target="_blank"
-                      >
-                        {a}
-                      </Link>
-                    );
-                  default:
-                    return a;
-                }
-              }, s[0]);
-            }
-          })}
+          {renderTextSection(section.value)}
         </Typography>
       );
     case "image":

@@ -4,7 +4,7 @@ interface OutputCommon {
   lastEditedTime: number;
 }
 
-type TextValue = Array<string | Array<string[]>>;
+export type TextValue = Array<string | Array<string[]>>;
 
 interface TextOutput extends OutputCommon {
   type: "text";
