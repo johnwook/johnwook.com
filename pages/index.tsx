@@ -17,6 +17,7 @@ import Paper from "@material-ui/core/Paper";
 
 import Layout from "../components/layout";
 import PostListItem from "../components/postListItem";
+import { renderTextSection } from "../components/postSections";
 import { HomeData } from "../data/home";
 import { getBaseUrl } from "../urlHelper";
 
@@ -35,7 +36,7 @@ const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
         <CardMedia component="img" image={cardImage.value} />
         <CardContent>
           <Typography variant="body2" color="textSecondary" component="p">
-            {cardText.value}
+            {renderTextSection(cardText.value)}
           </Typography>
         </CardContent>
       </Card>
