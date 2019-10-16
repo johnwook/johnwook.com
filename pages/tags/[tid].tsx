@@ -45,7 +45,7 @@ const Tag: NextPage<Props> = ({ tid, posts }) => (
           aria-label="posts"
         >
           {posts.map(post => (
-            <Link key={post.id} href={"/posts/[pid]"} as={`/posts/${post.id}`}>
+            <Link key={post.id} href="/posts/[pid]" as={`/posts/${post.id}`}>
               <ListItem button component="a">
                 <ListItemText
                   primary={

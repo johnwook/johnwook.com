@@ -22,7 +22,7 @@ const PostTags = (props: Props) => {
   return (
     <Box>
       {props.tags.map(tag => (
-        <Link key={tag} href={"/tags/[tid]"} as={`/tags/${tag}`}>
+        <Link key={tag} href="/tags/[tid]" as={`/tags/${tag}`}>
           <Chip
             clickable
             color="primary"
