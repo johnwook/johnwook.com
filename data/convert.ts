@@ -116,6 +116,6 @@ export const convertCollection = (
         createdTime: item.value.created_time
       };
     }),
-    tags: collection[Object.keys(collection)[0]].schema["1Ote"].options
+    tags: collection[Object.keys(collection)[0]].value.schema["1Ote"].options
   };
 };
