@@ -1,31 +1,23 @@
 import React from "react";
 
 import Head from "next/head";
-import Link from "next/link";
 import { NextPage } from "next";
 
 import fetch from "cross-fetch";
 
 import Box from "@material-ui/core/Box";
-import Chip from "@material-ui/core/Chip";
 import NoSsr from "@material-ui/core/NoSsr";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles } from "@material-ui/core/styles";
 
 import format from "date-fns/format";
 
 import Layout from "../../components/layout";
 import PostSections from "../../components/postSections";
+import PostTags from "../../components/postTags";
 import { PostData } from "../../data/post";
 import { getBaseUrl } from "../../urlHelper";
 
 type Props = PostData;
-
-const useStyles = makeStyles(theme => ({
-  chip: {
-    margin: theme.spacing(0.3)
-  }
-}));
 
 const renderDate = (timestamp: number, title: string) => (
   <NoSsr>
@@ -44,11 +36,10 @@ const Post: NextPage<Props> = ({
   createdTime,
   id,
   lastEditedTime,
+  tags,
   title,
   sections
 }) => {
-  const classes = useStyles({});
-
   return (
     <Layout>
       <Head>
@@ -67,30 +58,7 @@ const Post: NextPage<Props> = ({
         <PostSections sections={sections} />
       </Box>
 
-      <Box>
-        <Link href="/">
-          <Chip
-            clickable
-            color="primary"
-            component="a"
-            label="#book review"
-            size="small"
-            variant="outlined"
-            className={classes.chip}
-          />
-        </Link>
-        <Link href="/">
-          <Chip
-            clickable
-            color="primary"
-            component="a"
-            label="#essay"
-            size="small"
-            variant="outlined"
-            className={classes.chip}
-          />
-        </Link>
-      </Box>
+      <PostTags tags={tags} />
 
       <Box my={2}>
         {renderDate(createdTime, "Created")}
