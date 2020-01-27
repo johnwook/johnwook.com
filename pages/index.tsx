@@ -50,10 +50,10 @@ const Home: NextPage<Props> = ({ cardImage, nowReading, posts }) => (
           </Typography>
         </CardContent>
         <CardActions style={{ justifyContent: "flex-end" }}>
-          <Link href="/">
+          <Link href={"/books/[yid]"} as="/books/2020">
             <Button size="small">
               <Typography variant="caption" color="textSecondary">
-                지난 책들 보기
+                2020년 읽은 책들 보기
               </Typography>
             </Button>
           </Link>
