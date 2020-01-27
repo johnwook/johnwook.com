@@ -6,7 +6,9 @@ import { NextPage } from "next";
 
 import fetch from "cross-fetch";
 import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
@@ -46,10 +48,17 @@ const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
           <Typography variant="h5" component="h2">
             결국 이기는 사마의
           </Typography>
-          <Typography color="textSecondary" align="right">
-            친타오
-          </Typography>
+          <Typography align="right">친타오</Typography>
         </CardContent>
+        <CardActions style={{ justifyContent: "flex-end" }}>
+          <Link href="/">
+            <Button size="small">
+              <Typography variant="caption" color="textSecondary">
+                지난 책들 보기
+              </Typography>
+            </Button>
+          </Link>
+        </CardActions>
       </Card>
     </Box>
 
