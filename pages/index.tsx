@@ -11,11 +11,11 @@ import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 import Layout from "../components/layout";
 import PostListItem from "../components/postListItem";
@@ -25,7 +25,7 @@ import { getBaseUrl } from "../urlHelper";
 
 type Props = HomeData;
 
-const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
+const Home: NextPage<Props> = ({ cardImage, nowReading, posts }) => (
   <Layout>
     <Head>
       <meta property="og:url" content="https://johnwook.com" />
@@ -42,13 +42,12 @@ const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
     <Box mt={1}>
       <Card>
         <CardContent>
-          <Typography color="textSecondary" gutterBottom>
+          <Typography color="textSecondary" variant="h6" gutterBottom>
             Now reading
           </Typography>
-          <Typography variant="h5" component="h2">
-            결국 이기는 사마의
+          <Typography variant="body1">
+            {renderTextSection(nowReading.value)}
           </Typography>
-          <Typography align="right">친타오</Typography>
         </CardContent>
         <CardActions style={{ justifyContent: "flex-end" }}>
           <Link href="/">
