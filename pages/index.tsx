@@ -6,14 +6,16 @@ import { NextPage } from "next";
 
 import fetch from "cross-fetch";
 import Box from "@material-ui/core/Box";
+import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
+import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-import Typography from "@material-ui/core/Typography";
 import List from "@material-ui/core/List";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemText from "@material-ui/core/ListItemText";
 import Paper from "@material-ui/core/Paper";
+import Typography from "@material-ui/core/Typography";
 
 import Layout from "../components/layout";
 import PostListItem from "../components/postListItem";
@@ -23,7 +25,7 @@ import { getBaseUrl } from "../urlHelper";
 
 type Props = HomeData;
 
-const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
+const Home: NextPage<Props> = ({ cardImage, nowReading, posts }) => (
   <Layout>
     <Head>
       <meta property="og:url" content="https://johnwook.com" />
@@ -34,11 +36,28 @@ const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
     <Box mt={1}>
       <Card>
         <CardMedia component="img" image={cardImage.value} />
+      </Card>
+    </Box>
+
+    <Box mt={1}>
+      <Card>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {renderTextSection(cardText.value)}
+          <Typography color="textSecondary" variant="h6" gutterBottom>
+            Now reading
+          </Typography>
+          <Typography variant="body1">
+            {renderTextSection(nowReading.value)}
           </Typography>
         </CardContent>
+        <CardActions style={{ justifyContent: "flex-end" }}>
+          <Link href={"/books/[yid]"} as="/books/2020">
+            <Button size="small">
+              <Typography variant="caption" color="textSecondary">
+                2020년 읽은 책들 보기
+              </Typography>
+            </Button>
+          </Link>
+        </CardActions>
       </Card>
     </Box>
 

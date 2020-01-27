@@ -9,7 +9,7 @@ import {
 
 interface Output {
   cardImage: ImageBlock;
-  cardText: TextBlock;
+  nowReading: TextBlock;
   posts: ConvertCollectionOutput["posts"];
   tags: ConvertCollectionOutput["tags"];
 }
@@ -30,7 +30,7 @@ export const getData = async (): Promise<Output> => {
   const cardImage = convertBlock(
     homeBlocks.find(b => b.value.type === "image")
   ) as ImageBlock;
-  const cardText = convertBlock(
+  const nowReading = convertBlock(
     homeBlocks.find(b => b.value.type === "text")
   ) as TextBlock;
 
@@ -56,7 +56,7 @@ export const getData = async (): Promise<Output> => {
 
   return {
     cardImage,
-    cardText,
+    nowReading,
     posts,
     tags
   };
