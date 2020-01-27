@@ -49,6 +49,15 @@ const Home: NextPage<Props> = ({ cardImage, nowReading, posts }) => (
             {renderTextSection(nowReading.value)}
           </Typography>
         </CardContent>
+        <CardActions style={{ justifyContent: "flex-end" }}>
+          <Link href="/">
+            <Button size="small">
+              <Typography variant="caption" color="textSecondary">
+                지난 책들 보기
+              </Typography>
+            </Button>
+          </Link>
+        </CardActions>
       </Card>
     </Box>
 
