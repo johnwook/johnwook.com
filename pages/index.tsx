@@ -34,9 +34,20 @@ const Home: NextPage<Props> = ({ cardImage, cardText, posts }) => (
     <Box mt={1}>
       <Card>
         <CardMedia component="img" image={cardImage.value} />
+      </Card>
+    </Box>
+
+    <Box mt={1}>
+      <Card>
         <CardContent>
-          <Typography variant="body2" color="textSecondary" component="p">
-            {renderTextSection(cardText.value)}
+          <Typography color="textSecondary" gutterBottom>
+            Now reading
+          </Typography>
+          <Typography variant="h5" component="h2">
+            결국 이기는 사마의
+          </Typography>
+          <Typography color="textSecondary" align="right">
+            친타오
           </Typography>
         </CardContent>
       </Card>
