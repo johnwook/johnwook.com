@@ -3,6 +3,8 @@ import React from "react";
 import Head from "next/head";
 import { NextPage } from "next";
 
+import fetch from "cross-fetch";
+
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -10,31 +12,21 @@ import CardHeader from "@material-ui/core/CardHeader";
 import Typography from "@material-ui/core/Typography";
 
 import Layout from "../../components/layout";
+import { getBaseUrl } from "../../urlHelper";
 
-type Props = any;
+type Props = {
+  books: Array<{
+    id: string;
+    title: string;
+    author: string;
+    start: string;
+    end: string;
+    note: string;
+  }>;
+  year: string;
+};
 
-const rows = [
-  {
-    id: "1",
-    title: "결국 이기는 사마의",
-    author: "친타오",
-    start: "2020-01-22",
-    end: "",
-    note:
-      "수영이가 선물해줬다. 사마의는 배울 점이 많지만, 배우고 싶지 않기도 한 묘한 인물이다. 가슴을 뜨겁게, 머리를 차갑게 만드는 책이다."
-  },
-  {
-    id: "2",
-    title: "나의 한국 현대사",
-    author: "유시민",
-    start: "2019-12-18",
-    end: "2020-01-21",
-    note:
-      "불과 몇십년 전 이야기들을, 심지어 내가 태어난 이후의 일들 중에서도 모르는 것이 너무 많았다. 많은 이들에게 빚진 삶이다."
-  }
-];
-
-const BooksOfYear: NextPage<Props> = ({ year }) => {
+const BooksOfYear: NextPage<Props> = ({ books, year }) => {
   return (
     <Layout>
       <Head>
@@ -54,8 +46,8 @@ const BooksOfYear: NextPage<Props> = ({ year }) => {
         />
       </Head>
 
-      {rows.map(row => (
-        <Box mt={1}>
+      {books.map(row => (
+        <Box mt={1} key={row.id}>
           <Card>
             <CardHeader
               title={
@@ -85,11 +77,21 @@ const BooksOfYear: NextPage<Props> = ({ year }) => {
   );
 };
 
-BooksOfYear.getInitialProps = async ({ query }) => {
+BooksOfYear.getInitialProps = async ({ query, req }) => {
   const { yid } = query;
   const year = Array.isArray(yid) ? yid[0] : yid;
 
-  return { year };
+  const url = getBaseUrl(req) + "/api/books/" + year;
+
+  const res = await fetch(url);
+
+  if (res.ok) {
+    const books = await res.json();
+
+    return { books, year };
+  } else {
+    throw new Error("Oops");
+  }
 };
 
 export default BooksOfYear;
