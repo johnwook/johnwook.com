@@ -5,8 +5,8 @@ import { NextPage } from "next";
 
 import Box from "@material-ui/core/Box";
 import Card from "@material-ui/core/Card";
-import CardHeader from "@material-ui/core/CardHeader";
 import CardContent from "@material-ui/core/CardContent";
+import CardHeader from "@material-ui/core/CardHeader";
 import Typography from "@material-ui/core/Typography";
 
 import Layout from "../../components/layout";
@@ -54,16 +54,15 @@ const BooksOfYear: NextPage<Props> = ({ year }) => {
         />
       </Head>
 
-      <Box mt={1}>
-        <Card>
-          <CardHeader title={"Books in " + year} />
-        </Card>
-      </Box>
       {rows.map(row => (
         <Box mt={1}>
           <Card>
             <CardHeader
-              title={row.title + " :: " + row.author}
+              title={
+                <Typography variant="h6">
+                  {row.title + " :: " + row.author}
+                </Typography>
+              }
               subheader={
                 <Typography
                   variant="caption"
